@@ -1,0 +1,17 @@
+!!!
+%html
+%head
+	%title RamUniversity
+
+	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true 
+	= javascript_include_tag 'application', 'data-turbolinks-track' => true 
+	= csrf_meta_tags 
+</head>
+%body
+%p.notice= notice 
+%p.alert= alert
+	
+= yield 
+
+-Category.all.each do |c|
+	=link_to c.name, articles_path(category: c.name)
