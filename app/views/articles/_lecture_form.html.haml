@@ -1,0 +1,5 @@
+= simple_form_for @lecture do |f|
+	=	f.collection_select :article_id, Article.all, :id, :name, {promt: "Choose an Article"}
+	=	f.input :title
+	= 	f.input :content
+	=	f.submit

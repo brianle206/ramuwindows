@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
 	before_action :find_article, only: [:show,:edit, :update, :destroy]
 	before_action :authenticate_user!, except: [:index, :show, :landing]
+	before_action :find_lecture, only: [:show, :add_lecture]
 	def landing
 	end
 	def index
@@ -10,6 +11,16 @@ class ArticlesController < ApplicationController
 			@category_id = Category.find_by(name: params[:category]).id
 			@article = Article.where(category_id: @category_id).order("created_at DESC")
 		end
+	end
+
+	def add_lecture
+		@article = Article.find(params[:id])
+		@lecture = @article.lectures.build
+	end
+
+	def lecture_show
+		@lecture = Lecture.where(article_id: params[:id], id: params[:lid])
+		render 'lecture_show'
 	end
 
 	def show
@@ -49,7 +60,9 @@ class ArticlesController < ApplicationController
 	def find_article
 		@article = Article.find(params[:id])
 	end
-
+	def find_lecture
+		@lecture = Lecture.where(article_id: params[:id])
+	end
 	def article_parmas
 		params.require(:article).permit(:title, :content, :category_id)
 	end
