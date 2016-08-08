@@ -5,8 +5,9 @@
 	%h2= link_to lecture.title, "/articles/#{@article.id}/lecture/#{lecture.id}"
 	%p= lecture.content
 
-.btn.btn-default
-	= link_to "Create Lecture", "/articles/#{@article.id}/add_lecture"
+- if @article.category_id == 4
+	.btn.btn-default
+		= link_to "Create Lecture", "/articles/#{@article.id}/add_lecture"
 
 .btn-group
 	= link_to "Back", root_path, class: "btn btn-default"

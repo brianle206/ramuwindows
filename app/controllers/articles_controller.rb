@@ -14,8 +14,14 @@ class ArticlesController < ApplicationController
 	end
 
 	def add_lecture
+		@lecture = Lecture.new
+	end
+
+	def create_lecture
 		@article = Article.find(params[:id])
-		@lecture = @article.lectures.build
+		@lecture = @article.lectures.build(lecture_params)
+		@lecture.save
+		redirect_to @article
 	end
 
 	def lecture_show
@@ -61,9 +67,12 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id])
 	end
 	def find_lecture
-		@lecture = Lecture.where(article_id: params[:id])
+		@lecture = Lecture.where(article_id: params[:id]).order("id ASC")
 	end
 	def article_parmas
 		params.require(:article).permit(:title, :content, :category_id)
+	end
+	def lecture_params
+		params.require(:lecture).permit(:title, :content, :article_id)
 	end
 end
