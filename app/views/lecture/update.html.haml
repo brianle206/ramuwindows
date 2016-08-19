@@ -1,0 +1,4 @@
+= simple_form_for @lecture do |l|
+	=	l.input :title
+	= 	l.input :content,:input_html => {:rows => 5, :placeholder => "Enter some text.", :class => "span6", "data-provide" => "markdown" }
+	=	l.submit

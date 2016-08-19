@@ -1,0 +1,6 @@
+%h Welcome to RAM University Dashboard
+.col-sm-3
+	%ul.list-group
+		%li= link_to "Home", root_path, class: "list-group-item"
+		-Category.all.each do |category|
+			%li=link_to category.name, articles_path(category: category.name), class: "list-group-item"

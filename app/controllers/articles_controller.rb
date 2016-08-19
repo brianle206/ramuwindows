@@ -2,6 +2,9 @@ class ArticlesController < ApplicationController
 	before_action :find_article, only: [:show,:edit, :update, :destroy]
 	before_action :authenticate_user!, except: [:index, :show, :landing]
 	before_action :find_lecture, only: [:show, :add_lecture]
+	before_action :this_lecture, only: [:lecture_show, :lecture_edit, :lecture_update]
+	include MarkdownHelper 
+
 	def landing
 	end
 	def index
@@ -25,8 +28,25 @@ class ArticlesController < ApplicationController
 	end
 
 	def lecture_show
-		@lecture = Lecture.where(article_id: params[:id], id: params[:lid])
+		@lecture = Lecture.where(id: params[:lid])
 		render 'lecture_show'
+	end
+
+	def lecture_edit
+		
+	end
+
+	def lecture_update
+		@lecture.update(lecture_params)
+		redirect_to @lecture
+	end
+
+	def lecture_destroy
+		@lecture = Lecture.find(params[:lid])
+		if @lecture.present? 
+			@lecture.destroy
+		end
+		redirect_to root_path
 	end
 
 	def show
@@ -56,6 +76,11 @@ class ArticlesController < ApplicationController
 		end
 	end
 
+	def search
+		@article = Article.search(params[:query])
+		render action: 'show'
+	end
+	
 	def destroy
 		@article.destroy
 		redirect_to root_path
@@ -67,11 +92,15 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id])
 	end
 	def find_lecture
-		@lecture = Lecture.where(article_id: params[:id]).order("id ASC")
+		@lecture = Lecture.where(article_id: params[:id]).order('id ASC')
+	end
+	def this_lecture
+		@lecture = Lecture.find(params[:lid])
 	end
 	def article_parmas
 		params.require(:article).permit(:title, :content, :category_id)
 	end
+	
 	def lecture_params
 		params.require(:lecture).permit(:title, :content, :article_id)
 	end

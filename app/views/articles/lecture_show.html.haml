@@ -1,9 +1,12 @@
 -@lecture.each do |i|
 	%h2= i.title
-	%p= i.content
+	.htmlMarkUp
+		%p= markdown(i.content)
+		
 
 
 
-.btn-group
-	= link_to "Back", :back, class: "btn btn-default"
-	
+	.btn-group
+		= link_to "Back", :back, class: "btn btn-default"
+		= link_to "Edit",  "/articles/#{params[:id]}/lecture/#{params[:lid]}/edit",class: "btn btn-default"
+		= link_to "Destroy", "/articles/#{params[:id]}/lecture/#{params[:lid]}",method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"
