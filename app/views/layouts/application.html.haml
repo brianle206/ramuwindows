@@ -8,14 +8,20 @@
 	= csrf_meta_tags 
 
 %body
+	
 	%nav.navbar.navbar-default.navbar-fixed-top
 		.container
 			= link_to "RAM University", root_path, class: "navbar-brand"
+
 			%ul.nav.navbar-nav.navbar-right
+				%li 
+					%form{:action => "/search"}
+						= text_field_tag :search, params[:search], placeholder: "Search Posts"
+						= submit_tag "Search"
+
 				- if !user_signed_in?
 					%li= link_to "Sign In", new_user_session_path
 				- if user_signed_in?
-					%li= link_to "New Article", new_article_path
 					%li= link_to "Sign Out", destroy_user_session_path, :method => :delete
 			
 				
@@ -24,10 +30,19 @@
 	
 	.container
 		.row
-			.col-sm-9
+			- if user_signed_in?
+				.col-sm-2
+					%ul.list-group
+						%li= link_to "Home", root_path, class: "list-group-item"
+						-Category.all.each do |category|
+							%li=link_to category.name, admin_index_path(category: category.name), class: "list-group-item"
+			.col-sm-10
 				= yield 
-			.col-sm-3
-				%ul.list-group
-					%li= link_to "Home", root_path, class: "list-group-item"
-					-Category.all.each do |category|
-						%li=link_to category.name, articles_path(category: category.name), class: "list-group-item"
+
+			
+			- if !user_signed_in?
+				.col-sm-2
+					%ul.list-group
+						%li= link_to "Home", root_path, class: "list-group-item"
+						-Category.all.each do |category|
+							%li=link_to category.name, articles_path(category: category.name), class: "list-group-item"

@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 	before_action :find_article, only: [:show,:edit, :update, :destroy]
-	before_action :authenticate_user!, except: [:index, :show, :landing]
+	before_action :authenticate_user!, except: [:index, :show, :landing, :search]
 	before_action :find_lecture, only: [:show, :add_lecture]
 	before_action :this_lecture, only: [:lecture_show, :lecture_edit, :lecture_update]
 	include MarkdownHelper 
@@ -77,10 +77,11 @@ class ArticlesController < ApplicationController
 	end
 
 	def search
-		@article = Article.search(params[:query])
-		render action: 'show'
+		@article = Article.search(params[:search])
+		puts @article
+		render action: 'index'
 	end
-	
+
 	def destroy
 		@article.destroy
 		redirect_to root_path

@@ -4,8 +4,9 @@ Rails.application.routes.draw do
 
 
   devise_for :users
-  resources :articles, :lecture
+  resources :articles, :lecture, :admin
   root 'articles#landing'
+  get '/search' => 'articles#search'
   get '/new' => 'articles#new'
   get '/articles/:id/add_lecture' => 'articles#add_lecture'
   get '/articles/:id/lecture/:lid' => 'articles#lecture_show'
