@@ -36,6 +36,8 @@
 						%li= link_to "Home", root_path, class: "list-group-item"
 						-Category.all.each do |category|
 							%li=link_to category.name, admin_index_path(category: category.name), class: "list-group-item"
+						%li= link_to "New Article", new_article_path, class: "btn btn-primary"
+						
 			.col-sm-10
 				= yield 
 

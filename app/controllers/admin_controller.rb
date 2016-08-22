@@ -1,4 +1,5 @@
 class AdminController < ApplicationController
+
 	def index
 		if params[:category].blank?
 			@article = Article.all.order('created_at DESC')

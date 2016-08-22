@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
 
 
+ 
+
   devise_for :users
   resources :articles, :lecture, :admin
   root 'articles#landing'

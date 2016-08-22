@@ -12,9 +12,7 @@
 		- @article.each do |article|
 			%tr
 				%td= link_to article.title, article
-				%td= article.created_at.strftime('%b %d %y')
-				%td= article.updated_at.strftime('%b %d %y')
-				%td Edit
-				%td Delete
-%button.btn.btn-default
-	= link_to "New Article", new_article_path
+				%td= article.created_at.strftime('%b %d, %Y')
+				%td= article.updated_at.strftime('%b %d, %Y')
+				%td= link_to "Edit", edit_article_path(article.id), class: "btn btn-default"
+				%td= link_to "Delete", article_path(article.id),method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"
