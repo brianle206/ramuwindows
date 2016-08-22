@@ -12,7 +12,12 @@
 	%nav.navbar.navbar-default.navbar-fixed-top
 		.container
 			= link_to "RAM University", root_path, class: "navbar-brand"
-
+				
+			- if !user_signed_in? || !current_user.admin
+				%ul.nav.navbar-nav.navbar-left
+					%li= link_to "Home", root_path
+					-Category.all.each do |category|
+						%li=link_to category.name, articles_path(category: category.name)
 			%ul.nav.navbar-nav.navbar-right
 				%li 
 					%form{:action => "/search"}
@@ -30,21 +35,23 @@
 	
 	.container
 		.row
-			- if user_signed_in?
+			- if current_user.try(:admin?)
 				.col-sm-2
 					%ul.list-group
 						%li= link_to "Home", root_path, class: "list-group-item"
 						-Category.all.each do |category|
 							%li=link_to category.name, admin_index_path(category: category.name), class: "list-group-item"
 						%li= link_to "New Article", new_article_path, class: "btn btn-primary"
-						
+
+					-if current_user.email == 'brianle206@gmail.com'
+						%li= link_to("Manage", "/admin/manage", class: "btn btn-warning") 
 			.col-sm-10
 				= yield 
 
 			
-			- if !user_signed_in?
-				.col-sm-2
-					%ul.list-group
-						%li= link_to "Home", root_path, class: "list-group-item"
-						-Category.all.each do |category|
-							%li=link_to category.name, articles_path(category: category.name), class: "list-group-item"
+			/ - if !user_signed_in? || !current_user.admin
+			/ 	.col-sm-2
+			/ 		%ul.list-group
+			/ 			%li= link_to "Home", root_path, class: "list-group-item"
+			/ 			-Category.all.each do |category|
+			/ 				%li=link_to category.name, articles_path(category: category.name), class: "list-group-item"
