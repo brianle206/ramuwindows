@@ -28,8 +28,8 @@
 					%li= link_to "Sign In", new_user_session_path
 				- if user_signed_in?
 					%li= link_to "Sign Out", destroy_user_session_path, :method => :delete
-			
-				
+					- if !current_user.try(:admin?)
+						%li= link_to "Dashboard", dashboard_index_path
 	%p.notice= notice 
 	%p.alert= alert
 	
@@ -45,13 +45,9 @@
 
 					-if current_user.email == 'brianle206@gmail.com'
 						%li= link_to("Manage", "/admin/manage", class: "btn btn-warning") 
+			
 			.col-sm-10
 				= yield 
 
 			
-			/ - if !user_signed_in? || !current_user.admin
-			/ 	.col-sm-2
-			/ 		%ul.list-group
-			/ 			%li= link_to "Home", root_path, class: "list-group-item"
-			/ 			-Category.all.each do |category|
-			/ 				%li=link_to category.name, articles_path(category: category.name), class: "list-group-item"
+			

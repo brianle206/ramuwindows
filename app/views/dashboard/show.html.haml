@@ -1,0 +1,13 @@
+= render 'user_dashboard'
+
+%p= @user.email
+%p= @user.created_at
+%p= @user.admin
+
+
+- @article.each do |article|
+	%h1= article.title
+
+	- @lesson.each do |lecture|
+		- if lecture.article_id == article.id
+			%h1= lecture.title

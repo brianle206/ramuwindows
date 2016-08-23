@@ -1,0 +1,5 @@
+.col-sm-2
+	%ul.list-group
+		%li.list-group-item=  link_to "Account", dashboard_path(current_user.id)
+		%li.list-group-item=  link_to "Progress", dashboard_progress_path
+		%li.list-group-item= link_to "Settings", edit_user_password_path(@user)
