@@ -2,6 +2,7 @@ class DashboardController < ApplicationController
   before_filter :find_user
   before_filter :find_lessons
   before_filter :find_size
+  before_filter :find_status
   def index
   end
 
@@ -38,5 +39,8 @@ class DashboardController < ApplicationController
   def find_size
     @article = Article.where(category_id: 4)
     @size = Lecture.where(article_id: @article).size
+  end
+  def find_status
+    @status = Complete.where(user_id: current_user.id)
   end
 end

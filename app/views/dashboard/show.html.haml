@@ -20,4 +20,6 @@
 						%tr
 							%td
 							%td= lecture.title
-							%td= @size
+							- @status.each do |status|
+								- if status.lecture_id == lecture.id
+									%td= status.status

@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
+  get 'progress/add'
+
   devise_for :users
   resources :articles, :lecture, :admin, :dashboard
+  #Progress Tracker
+  get '/progress/add/:lid/:uid' => 'progress#add'
+
   #Admin Routes
   get '/destroy/:id' => 'admin#destroy'
   get '/make_admin/:id' => 'admin#make_admin'
