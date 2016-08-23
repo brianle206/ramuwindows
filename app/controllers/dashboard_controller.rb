@@ -32,6 +32,6 @@ class DashboardController < ApplicationController
 
   def find_lessons
     @article = Article.where(category_id: 4)
-    @lesson = Lecture.where(article_id: @article)
+    @lesson = Lecture.where(article_id: @article).order("id ASC")
   end
 end
