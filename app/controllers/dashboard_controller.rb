@@ -1,6 +1,7 @@
 class DashboardController < ApplicationController
   before_filter :find_user
   before_filter :find_lessons
+  before_filter :find_size
   def index
   end
 
@@ -33,5 +34,9 @@ class DashboardController < ApplicationController
   def find_lessons
     @article = Article.where(category_id: 4)
     @lesson = Lecture.where(article_id: @article).order("id ASC")
+  end
+  def find_size
+    @article = Article.where(category_id: 4)
+    @size = Lecture.where(article_id: @article).size
   end
 end
