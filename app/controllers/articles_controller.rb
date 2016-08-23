@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show, :landing, :search]
 	before_action :find_lecture, only: [:show, :add_lecture]
 	before_action :this_lecture, only: [:lecture_show, :lecture_edit, :lecture_update]
+	before_action :find_status, only: [:lecture_show]
 	include MarkdownHelper 
 
 	def landing
@@ -104,5 +105,9 @@ class ArticlesController < ApplicationController
 	
 	def lecture_params
 		params.require(:lecture).permit(:title, :content, :article_id)
+	end
+	def find_status
+		@lecture = Lecture.find(params[:lid])
+		@status = Complete.where(user_id: current_user.id, lecture_id: @lecture.id)
 	end
 end

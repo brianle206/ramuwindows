@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20160823144332) do
   create_table "completes", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "lecture_id"
-    t.boolean  "status"
+    t.boolean  "status",     default: false 
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

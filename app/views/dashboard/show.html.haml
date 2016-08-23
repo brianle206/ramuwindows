@@ -22,4 +22,7 @@
 							%td= lecture.title
 							- @status.each do |status|
 								- if status.lecture_id == lecture.id
-									%td= status.status
+									%td Completed
+								- else
+									%td Not Completed
+							

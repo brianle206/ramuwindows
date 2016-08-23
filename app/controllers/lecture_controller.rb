@@ -6,13 +6,13 @@ class LectureController < ApplicationController
 
   def update
     @lecture.update(lecture_params)
-    redirect_to '/articles/8'
+    redirect_to '/articles/4'
   end
 
   def destroy
   	@lecture.destroy
 
-    redirect_to '/articles/8'
+    redirect_to '/articles/4'
   end
 
   private

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'progress/add'
+
 
   devise_for :users
   resources :articles, :lecture, :admin, :dashboard
