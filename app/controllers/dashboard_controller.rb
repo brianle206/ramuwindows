@@ -1,4 +1,5 @@
 class DashboardController < ApplicationController
+  before_filter :authenticate_user!
   before_filter :find_user
   before_filter :find_lessons
   before_filter :find_size

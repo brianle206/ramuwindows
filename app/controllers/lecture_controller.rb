@@ -1,6 +1,7 @@
 class LectureController < ApplicationController
 	before_action :find_lecture, only: [:destroy]
   before_action :find_lec_edit, except: [:edit]
+  before_action :authenticate_user!
   def create
   end
 
