@@ -46,6 +46,8 @@ class DashboardController < ApplicationController
     @status = Complete.where(user_id: current_user.id)
   end
   def progress
-    @progress = Article.where(category_id: 4).joins(Lecture.where(article_id:8))
+    @progress = Complete.joins("INNER JOIN lectures ON lectures.id = completes.lecture_id INNER JOIN articles ON articles.id = lectures.article_id AND completes.user_id = #{current_user.id} AND completes.lecture_id = lectures.id").count
+    @lessons = Lecture.joins("INNER JOIN articles ON lectures.article_id = articles.id WHERE lectures.article_id = articles.id").count
+    @numbers = ("#{@progress} / #{@lessons}")
   end
 end

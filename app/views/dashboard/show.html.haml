@@ -14,7 +14,7 @@
 			%tr
 				%td= article.title
 				%td
-				%td= @size 
+				%td= @numbers 
 				- @lesson.each do |lecture|
 					- if lecture.article_id == article.id
 						%tr
