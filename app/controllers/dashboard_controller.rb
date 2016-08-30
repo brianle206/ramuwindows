@@ -1,9 +1,6 @@
 class DashboardController < ApplicationController
   before_filter :authenticate_user!
-  before_filter :find_user, :progress
-  before_filter :find_lessons
-  before_filter :find_size
-  before_filter :find_status
+  before_filter :find_user, :progress, :find_lessons, :find_size, :find_status
 
   def index
   end
