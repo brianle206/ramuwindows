@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'hirb'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem "font-awesome-rails"
 gem 'pygments.rb'
 gem 'redcarpet'
 # gem 'unicorn'

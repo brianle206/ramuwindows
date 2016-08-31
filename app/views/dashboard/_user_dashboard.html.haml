@@ -1,5 +1,25 @@
-.navbar-left
-	%ul.list-group
-		%li.list-group-item=  link_to "Account", dashboard_index_path
-		%li.list-group-item=  link_to "Progress", dashboard_progress_path
-		%li.list-group-item= link_to "Settings", edit_user_password_path(@user)
+/ .navbar-fixed-left.sidebar
+	
+/ 	.toggle-button
+/ 		.menu-bar.menu-bar-top
+/ 		.menu-bar.menu-bar-middle
+/ 		.menu-bar.menu-bar-bottom
+
+	
+	
+%header
+	%span.toggle-button
+		.menu-bar.menu-bar-top
+		.menu-bar.menu-bar-middle
+		.menu-bar.menu-bar-bottom
+	.menu-wrap
+		.menu-sidebar
+			%ul.menu
+			-progress
+			-@article.each do |article|
+				%li
+					%h4= article.title
+					- @lessons. each do |lesson|
+						%ul 
+						- if lesson.article_id == article.id
+							%li= link_to lesson.title, "/articles/#{article.id}/lecture/#{lesson.id}"

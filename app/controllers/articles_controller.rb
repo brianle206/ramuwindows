@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
 	before_action :this_lecture, only: [:lecture_show, :lecture_edit, :lecture_update]
 	before_action :find_status, only: [:lecture_show]
 	include MarkdownHelper 
-	
+	include DashboardHelper
 	def landing
 	end
 	def index
