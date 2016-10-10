@@ -7,13 +7,13 @@ class LectureController < ApplicationController
 
   def update
     @lecture.update(lecture_params)
-    redirect_to '/articles/4'
+    redirect_to '/learn'
   end
 
   def destroy
   	@lecture.destroy
 
-    redirect_to '/articles/4'
+    redirect_to '/learn'
   end
 
   private
@@ -25,6 +25,6 @@ class LectureController < ApplicationController
   	@lecture = Lecture.find(params[:id])
   end
   def lecture_params
-    params.require(:lecture).permit(:title, :content, :article_id)
+    params.require(:lecture).permit(:title, :content, :learn_id)
   end
 end

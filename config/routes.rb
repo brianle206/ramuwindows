@@ -2,10 +2,16 @@ Rails.application.routes.draw do
 
 
 
+
+
+  get 'course/add'
+
+  get 'course/update'
+
   devise_for :users
-  resources :articles, :lecture, :admin, :dashboard
+  resources :articles, :lecture, :admin, :dashboard, :learn
   #Progress Tracker
-  get '/progress/add/:lid/:uid' => 'progress#add'
+  get '/progress/add/:learn_id/:user_id/:lecture_id' => 'progress#add'
 
   #Admin Routes
   get '/destroy/:id' => 'admin#destroy'
@@ -18,10 +24,12 @@ Rails.application.routes.draw do
   root 'articles#landing'
   get '/search' => 'articles#search'
   get '/new' => 'articles#new'
-  get '/articles/:id/add_lecture' => 'articles#add_lecture'
-  get '/articles/:id/lecture/:lid' => 'articles#lecture_show'
-  get '/articles/:id/lecture/:lid/edit' => 'articles#lecture_edit'
-  post '/articles/:id/create_lecture' => 'articles#create_lecture'
+  #Learn Routes and Lectures
+  get '/learn/:id/add_lecture' => 'learn#add_lecture'
+  get '/learn/:id/lecture/:lid' => 'learn#lecture_show'
+  get '/learn/:id/lecture/:lid/edit' => 'learn#lecture_edit'
+  post '/learn/:id/create_lecture' => 'learn#create_lecture'
   get '/admin' => 'admin#index'
-  delete '/articles/:id/lecture/:lid' => 'articles#lecture_destroy'
+  delete '/learn/:id/lecture/:lid' => 'learn#lecture_destroy'
+  get '/add/course/:learn_id' => 'course#add'
 end

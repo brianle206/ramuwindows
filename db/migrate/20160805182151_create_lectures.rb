@@ -3,7 +3,7 @@ class CreateLectures < ActiveRecord::Migration
     create_table :lectures do |t|
       t.string :title
       t.text :content
-      t.integer :article_id
+      t.references :learn
 
       t.timestamps null: false
     end

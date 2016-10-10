@@ -15,11 +15,16 @@
 	.menu-wrap
 		.menu-sidebar
 			%ul.menu
-			-progress
-			-@article.each do |article|
-				%li
-					%h4= article.title
-					- @lessons. each do |lesson|
-						%ul 
-						- if lesson.article_id == article.id
-							%li= link_to lesson.title, "/articles/#{article.id}/lecture/#{lesson.id}"
+			-courses
+			- if @courses.empty?
+				%h3 You are currently not enrolled in any courses
+			- else
+				-@courses.each do |course|
+					-find_learn(course.learn_id)
+					-@learn.each do |learn| 
+						%h4=link_to learn.title, "/learn/#{learn.id}", class: "course-title"
+						-find_lecture(learn.id)
+							-@lecture.each do |lecture|
+							%li=link_to lecture.title, "/learn/#{learn.id}/lecture/#{lecture.id}"
+
+

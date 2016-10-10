@@ -1,6 +1,6 @@
 class DashboardController < ApplicationController
   before_filter :authenticate_user!
-  before_filter :find_user, :progress, :find_lessons, :find_size
+  before_filter :find_user, :progress, :find_lessons
 
   def index
   end
@@ -32,18 +32,14 @@ class DashboardController < ApplicationController
   end
 
   def find_lessons
-    @lesson = Lecture.joins("JOIN articles ON articles.id = lectures.article_id").order("id ASC")
+    @lesson = Lecture.joins("JOIN learns ON learns.id = lectures.learn_id").order("id ASC")
   end
-  def find_size
-    @article = Article.where(category_id: 4)
-  end
- 
+  
   def progress
-    @article = Article.all
-    @progress = Complete.joins("INNER JOIN lectures ON lectures.id = completes.lecture_id INNER JOIN articles ON articles.id = lectures.article_id AND completes.user_id = #{current_user.id} AND completes.lecture_id = lectures.id")
-    @lessons = Lecture.joins("INNER JOIN articles ON lectures.article_id = articles.id WHERE lectures.article_id = articles.id").order('id ASC')
+    @article = Learn.all
+    @progress = Complete.joins("INNER JOIN lectures ON lectures.id = completes.lecture_id INNER JOIN learns ON learns.id = lectures.learn_id AND completes.user_id = #{current_user.id} AND completes.lecture_id = lectures.id")
+    @lessons = Lecture.joins("INNER JOIN learns ON lectures.learn_id = learns.id WHERE lectures.learn_id = learns.id").order('id ASC')
     @status = Complete.where(user_id: current_user.id)
-    
-
   end
+
 end

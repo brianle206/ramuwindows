@@ -1,0 +1,18 @@
+%h1= @section.title
+
+Add this course now to start your journey on becoming RAM certified!
+-if current_user	
+	.btn.btn-default
+		= link_to "Add Course", "/add/course/#{@section.id}"
+	- @lecture.each do |l|
+		%h2= link_to l.title, "/learn/#{@section.id}/lecture/#{l.id}"
+-else
+	- @lecture.each do |l|
+		%h2= l.title
+
+-if current_user.try(:admin?)
+	.btn.btn-default
+		= link_to "Create Lecture", "/learn/#{@section.id}/add_lecture"
+
+	.btn.btn-default
+		= link_to "Destroy", "/learn/#{@section.id}", method: 'DELETE'

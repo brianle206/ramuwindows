@@ -21,3 +21,19 @@
 ul{
 	list-style: none;
 }
+.navbar-default{
+	background-image: url('http://rammount.com/images/device/phone/banner2.jpg')
+}
+.footer{
+	position:fixed;
+	bottom:0;
+	width:100%;
+ 	margin-top: 20px;
+
+ 	height: 50px;
+	background-image: url('http://rammount.com/images/device/phone/banner2.jpg');
+	background-size: cover;
+}
+body{
+	padding-bottom: 70px;
+}

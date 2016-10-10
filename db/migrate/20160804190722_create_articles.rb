@@ -3,7 +3,8 @@ class CreateArticles < ActiveRecord::Migration
     create_table :articles do |t|
       t.string :title
       t.text :content
-
+      t.references :category
+      t.references :user
       t.timestamps null: false
     end
   end
