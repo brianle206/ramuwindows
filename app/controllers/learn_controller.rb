@@ -5,7 +5,7 @@ class LearnController < ApplicationController
   before_action :find_status, only: [:lecture_show]
   def index
     @module = Learn.all
-    @lecture = Lecture.all
+    @lecture = Lecture.all.order('id ASC')
   end
 
   def create
