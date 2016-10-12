@@ -1,0 +1,7 @@
+<%= @quiz.title %>
+<% @quiz.questions.each do |q| %>
+	<h1><%= q.question %></h1>
+		<% q.answers.each do |a| %>
+			<li><input type='radio' value="<%= a.content %>">  <%= a.content %></li>
+		<%end %>
+<% end %>
