@@ -18,16 +18,12 @@
 	<% end %>
 			<% check_user_answers(quiz.id) %>
 				
-					<% @userAnswer.each do |answer| %>
-						<% answer_content(answer) %>
+					<% for answer in @userAnswer %>
+						<% answer_content(answer.answer_id) %>
 						<% question_content(answer.question_id) %>
 						<li><h1><%= @question.question %></h1></li>
 							<li><strong>Correct Answer: </strong> <%= @question.answer %></li>
-							<li><strong>Your Answer:</strong> <%= @answerContent %></li>
-							
-							
-						
+							<li><strong>Your Answer:</strong> <%= @answer %></li>
 					<% end %>
 						<%= @correct %> / <%= @questions %> 
 <% end %>
-
