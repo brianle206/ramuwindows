@@ -22,7 +22,7 @@ class QuizController < ApplicationController
     end
   end
   def show
-    
+    @quiz = Quiz.find(params[:qid])
   end
 
   def create_user_answer

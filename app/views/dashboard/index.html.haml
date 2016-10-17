@@ -14,7 +14,8 @@
 				.col-sm-7
 					-if @percentage == 100
 						.btn.btn-primary
-							=link_to 'Take Quiz', "/learn/#{learn.id}/quiz", class: "course-title"
+							- learn.quizzes.each do |quiz|
+								=link_to 'Take Quiz', "/learn/#{learn.id}/quiz/#{quiz.id}", class: "course-title"
 					- else
 						.progress
 							.progress-bar{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "100", :role => "progressbar", :style => "width:#{@percentage}%"}
