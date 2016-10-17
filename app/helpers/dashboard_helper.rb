@@ -18,7 +18,7 @@ module DashboardHelper
 	end
 
 	def find_lecture(id)
-		@lecture = Lecture.where(learn_id: id)
+		@lecture = Lecture.where(learn_id: id).order('id ASC')
 	end
 
   def find_complete(id)

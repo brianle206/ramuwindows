@@ -1,0 +1,13 @@
+<%= simple_form_for @quiz do |f| %>
+	<div class='field'>
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+	</div>
+	<%= f.fields_for :questions do |builder| %>
+		<fieldset>
+			<% render 'question_fields', f: builder %>
+		</fieldset>
+	<% end %>
+	<p><%= link_to_add_fields "Add Question", f, :questions %></p>
+	<p><%=f.submit "Submit" %></p>
+<% end %>

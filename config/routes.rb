@@ -29,4 +29,5 @@ Rails.application.routes.draw do
   get '/learn/:id/quiz/new' => 'quiz#new'
   get '/learn/:id/quiz' => 'quiz#show', as: :take_quiz_path
   post '/learn/:id/quiz/create' => 'quiz#create'
+  post '/learn/:id/quiz/:uid' => 'quiz#create_user_answer', as: :user_quiz_answer_path
 end

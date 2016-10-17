@@ -5,7 +5,6 @@ class LearnController < ApplicationController
   before_action :find_status, only: [:lecture_show]
   def index
     @module = Learn.all
-    @lecture = Lecture.all.order('id ASC')
   end
 
   def create
@@ -83,11 +82,6 @@ class LearnController < ApplicationController
   end
   def find_section
     @section = Learn.find(params[:id])
-    if Lecture.where(learn_id: params[:id]).present?
-      @lecture = Lecture.joins("JOIN learns ON learns.id = lectures.learn_id WHERE lectures.learn_id = #{params[:id]}").order('id ASC')
-    else
-      @lecture = "No Records"
-    end
   end
   def find_status
     @lecture = Lecture.find(params[:lid])

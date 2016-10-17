@@ -8,6 +8,7 @@ class QuizController < ApplicationController
   end
 
   def edit
+    @quiz = Quiz.find(params[:id])
   end
 
   def update
@@ -21,10 +22,20 @@ class QuizController < ApplicationController
     end
   end
   def show
-    @quiz = Quiz.find_by(learn_id: params[:id])
+    
   end
+
+  def create_user_answer
+    @userAnswer = UserQuizAnswer.create(user_answer_params)
+    if @userAnswer.save
+      redirect_to :back
+    end
+
+  end
+
   def destroy
   end
+
   private 
   def quiz_params
     params.require(:quiz).permit(:title, :learn_id, 
@@ -35,7 +46,7 @@ class QuizController < ApplicationController
   def question_params
     params.require(:question).permit(:question, :answer, :quiz_id)
   end
-  def answer_params
-    params.require(:answer).permit(:content, :question_id)
+  def user_answer_params
+    params.require(:user_quiz_answer).permit(:quiz_id, :user_id, :answer_id, :question_id)
   end
 end

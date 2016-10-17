@@ -12,7 +12,7 @@
 					.front-title= m.title
 				.back.tile
 					.back-title
-						-@lecture.each do |l|
+						-m.lectures.each do |l|
 							- if l.learn_id == m.id
 								%li
 									%p= l.title

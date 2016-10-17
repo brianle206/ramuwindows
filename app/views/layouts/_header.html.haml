@@ -1,0 +1,46 @@
+%nav.navbar.navbar-default.navbar-fixed-top
+	.container
+		= link_to "RAM University", root_path, class: "navbar-brand"
+			
+		- if !user_signed_in? || !current_user.admin
+			%ul.nav.navbar-nav.navbar-left
+				%li= link_to "Home", root_path
+				-Category.all.each do |category|
+					%li=link_to category.name, articles_path(category: category.name)
+				%li= link_to "Learn", learn_index_path
+
+		- if current_user.try(:admin?)
+			%ul.nav.navbar-nav.navbar-left
+				%li= link_to "Dashboard", "/admin"
+
+		%ul.nav.navbar-nav.navbar-right
+			%li 
+				%form{:action => "/search"}
+					= text_field_tag :search, params[:search], placeholder: "Search Posts"
+					= submit_tag "Search"
+
+			- if !user_signed_in?
+				%li= link_to "Sign In", new_user_session_path
+			- if user_signed_in?
+				%li= link_to "Sign Out", destroy_user_session_path, :method => :delete
+				- if !current_user.try(:admin?)
+					%li= link_to "Dashboard", dashboard_index_path
+
+%p.notice= notice 
+%p.alert= alert
+- if !current_user.try(:admin?) && user_signed_in?
+	= render '/dashboard/user_dashboard'
+.container
+	.row
+		- if current_user.try(:admin?)
+			%ul.nav.navbar-nav.navbar-left
+				%li= link_to "Home", root_path, class: "list-group-item"
+				-Category.all.each do |category|
+					%li=link_to category.name, admin_index_path(category: category.name), class: "list-group-item"
+				%li= link_to "New Article", new_article_path, class: "btn btn-primary"
+
+				%li= link_to("Manage", "/admin/manage", class: "btn btn-warning") 
+
+				%li= link_to "Create Learning Module", learn_index_path, class: "btn btn-primary"
+
+				%li= link_to "Create Quiz", quiz_index_path

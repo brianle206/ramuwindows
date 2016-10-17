@@ -1,7 +1,33 @@
-<%= @quiz.title %>
-<% @quiz.questions.each do |q| %>
-	<h1><%= q.question %></h1>
-		<% q.answers.each do |a| %>
-			<li><input type='radio' value="<%= a.content %>">  <%= a.content %></li>
-		<%end %>
+<% find_quiz(params[:id]) %>
+<% @quiz.each do |quiz| %>
+<h1><%= quiz.title %></h1>
+	<% quiz.questions.each do |q| %>
+		<% @taken_already = UserQuizAnswer.where(quiz_id: quiz.id, user_id: current_user.id, question_id: q.id) %>
+			<% if @taken_already.blank?  %>
+			<%= form_for UserQuizAnswer.new, :url => "/learn/#{params[:id]}/quiz/#{current_user.id}" do |f| %>
+				<%= f.hidden_field :quiz_id, value: "#{quiz.id}" %>
+				<%= f.hidden_field :learn_id, value: "#{params[:id]}" %>
+				<%= f.hidden_field :user_id, value: "#{current_user.id}" %>
+				<%= f.hidden_field :question_id, value: "#{q.id}" %>
+				<%= f.label :question, value: "#{q.question}" %>	
+				<%= f.collection_select(:answer_id, q.answers, :id, :content) %>
+				<input type='submit' value='Submit'>
+			<% end %>
+		<% end %>
+
+	<% end %>
+			<% check_user_answers(quiz.id) %>
+				
+					<% @userAnswer.each do |answer| %>
+						<% answer_content(answer) %>
+						<% question_content(answer.question_id) %>
+						<li><h1><%= @question.question %></h1></li>
+							<li><strong>Correct Answer: </strong> <%= @question.answer %></li>
+							<li><strong>Your Answer:</strong> <%= @answerContent %></li>
+							
+							
+						
+					<% end %>
+						<%= @correct %> / <%= @questions %> 
 <% end %>
+

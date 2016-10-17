@@ -30,7 +30,8 @@ gem 'pygments.rb'
 gem 'redcarpet'
 # gem 'unicorn'
 gem 'rails-bootstrap-markdown'
-
+gem 'will_paginate-bootstrap'
+gem 'will_paginate'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'haml'

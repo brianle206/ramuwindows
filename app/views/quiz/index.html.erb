@@ -2,5 +2,8 @@
 <p>Find me in app/views/quiz/index.html.erb</p>
 <% @courses.each do |course| %>
 	<li><%= course.title %></li>
+		<% course.quizzes.each do |quiz| %>
+			<%=link_to quiz.title, edit_quiz_path(quiz) %>
+		<% end %>
 		<li><%= link_to "Create Quiz For this course", "/learn/#{course.id}/quiz/new" %></li>
 <% end %>
