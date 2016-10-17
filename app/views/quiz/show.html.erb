@@ -5,7 +5,7 @@
 		<% @taken_already = UserQuizAnswer.where(quiz_id: @quiz.id, user_id: current_user.id, question_id: q.id) %>
 			<% if @taken_already.blank?  %>
 			<%= form_for UserQuizAnswer.new, :url => "/learn/#{params[:id]}/quiz/#{current_user.id}" do |f| %>
-				<%= f.hidden_field :quiz_id, value: "#{quiz.id}" %>
+				<%= f.hidden_field :quiz_id, value: "#{@quiz.id}" %>
 				<%= f.hidden_field :learn_id, value: "#{params[:id]}" %>
 				<%= f.hidden_field :user_id, value: "#{current_user.id}" %>
 				<%= f.hidden_field :question_id, value: "#{q.id}" %>
