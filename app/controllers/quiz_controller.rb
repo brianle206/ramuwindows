@@ -23,6 +23,7 @@ class QuizController < ApplicationController
   end
   def show
     @quiz = Quiz.find(params[:qid])
+    @questions = Question.where(quiz_id: params[:qid]).page(params[:page]).per_page(1)
   end
 
   def create_user_answer

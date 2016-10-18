@@ -1,13 +1,20 @@
 %h1= @section.title
 
 Add this course now to start your journey on becoming RAM certified!
--if current_user	
-	.btn.btn-default
-		= link_to "Add Course", "/add/course/#{@section.id}"
-	- @section.lectures.each do |l|
+-if current_user
+	-is_enrolled(params[:id])
+	-if @enrolled != true
+		.btn.btn-default= link_to "Add Course", "/add/course/#{@section.id}"
+
+
+-if current_user && !current_user.try(:admin?)
+	
+	- @lectures.each do |l|
 		%h2= link_to l.title, "/learn/#{@section.id}/lecture/#{l.id}"
+		=markdown(l.content)
+	
 -else
-	- @section.lectures.each do |l|
+	- @lectures.each do |l|
 		%h2= l.title
 
 -if current_user.try(:admin?)
@@ -16,3 +23,5 @@ Add this course now to start your journey on becoming RAM certified!
 
 	.btn.btn-default
 		= link_to "Destroy", "/learn/#{@section.id}", method: 'DELETE'
+
+=will_paginate @lectures

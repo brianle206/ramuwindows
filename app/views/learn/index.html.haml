@@ -1,23 +1,26 @@
-%h1 Welcome to RAM University Course List
-.row
-	-if current_user.try(:admin?)
-		.btn.btn-default
-			=link_to "Create New Learning Section", new_learn_path
+.container.background
+	%h1 Welcome to RAM University Course List
+	.row
+		-if current_user.try(:admin?)
+			.btn.btn-default
+				=link_to "Create New Learning Section", new_learn_path
 
-- @module.each do |m|
-	=link_to learn_path(m) do
-		.col-sm-3.flip-container
-			.flipper
-				.front.tile
-					.front-title= m.title
-				.back.tile
-					.back-title
-						-m.lectures.each do |l|
-							- if l.learn_id == m.id
-								%li
-									%p= l.title
+	- @module.each do |m|
+		=link_to learn_path(m) do
+			.col-md-6.col-sm-3.flip-container
+				.flipper
+					.front.tile
+						.front-title
+							= m.title
+							=image_tag 'book2.jpeg', class: "img-responsive"
+					.back.tile
+						.back-title
+							-m.lectures.each do |l|
+								- if l.learn_id == m.id
+									%li
+										%p= l.title
 
-		
+			
 
 
 

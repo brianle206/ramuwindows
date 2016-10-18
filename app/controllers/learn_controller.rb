@@ -3,6 +3,7 @@ class LearnController < ApplicationController
   before_action :find_lecture, only: [:show, :add_lecture]
   before_action :this_lecture, only: [:lecture_show, :lecture_edit, :lecture_update]
   before_action :find_status, only: [:lecture_show]
+  include LearnHelper
   def index
     @module = Learn.all
   end
@@ -82,6 +83,7 @@ class LearnController < ApplicationController
   end
   def find_section
     @section = Learn.find(params[:id])
+    @lectures = @section.lectures.page(params[:page]).per_page(1)
   end
   def find_status
     @lecture = Lecture.find(params[:lid])

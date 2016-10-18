@@ -24,7 +24,7 @@ body {
 /* ==================================== */
 
 .menu-wrap {
-  background-color: #48709d;
+  background-color: #bfbfbf;
   position: fixed;
   top: 0;
   height: 100%;
@@ -43,7 +43,7 @@ body {
 .menu-sidebar {
   margin: 75px 0 80px 10px;
   position: relative;
-  top: 70px;
+  top: 110px;
 }
 .menu-sidebar li {
   padding: 18px 22px 0;
@@ -96,7 +96,7 @@ body {
   position: fixed;
   width: 44px;
   height: 40px;
-  top: 60px;
+  top: 140px;
   left: 40px;
   padding: 4px;
   transition: .25s;

@@ -1,20 +1,22 @@
-%nav.navbar.navbar-default.navbar-fixed-top
+%nav.navbar.navbar-default.navbar-fixed-top.bgWhite
+	.text-center
+		= link_to "RAM University", root_path, class: "logo"
+		%hr
 	.container
-		= link_to "RAM University", root_path, class: "navbar-brand"
 			
 		- if !user_signed_in? || !current_user.admin
 			%ul.nav.navbar-nav.navbar-left
-				%li= link_to "Home", root_path
+				%li= link_to "Home", root_path, class: "category"
 				-Category.all.each do |category|
-					%li=link_to category.name, articles_path(category: category.name)
-				%li= link_to "Learn", learn_index_path
+					%li=link_to category.name, articles_path(category: category.name), :class=>"category"
+				%li= link_to "Learn", learn_index_path, class: "category"
 
 		- if current_user.try(:admin?)
 			%ul.nav.navbar-nav.navbar-left
 				%li= link_to "Dashboard", "/admin"
 
 		%ul.nav.navbar-nav.navbar-right
-			%li 
+			%li.vertical-align
 				%form{:action => "/search"}
 					= text_field_tag :search, params[:search], placeholder: "Search Posts"
 					= submit_tag "Search"
