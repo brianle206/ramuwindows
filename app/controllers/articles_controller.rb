@@ -89,6 +89,9 @@ class ArticlesController < ApplicationController
 	end
 
 	private 
+	def article_parmas
+ 		params.require(:article).permit(:title, :content, :category_id)
+ 	end
 	# def find_lecture
 	#     @lecture = Lecture.where(learn_id: params[:id]).order('id ASC')
  #  	end

@@ -1,4 +1,4 @@
-.container.background
+.container
 	%h1 Welcome to RAM University Course List
 	.row
 		-if current_user.try(:admin?)
@@ -10,9 +10,9 @@
 			.col-md-6.col-sm-3.flip-container
 				.flipper
 					.front.tile
-						.front-title
-							= m.title
-							=image_tag 'book2.jpeg', class: "img-responsive"
+						.front-title= m.title
+
+						=image_tag 'book2.jpeg', class: "img-responsive img-centered"
 					.back.tile
 						.back-title
 							-m.lectures.each do |l|

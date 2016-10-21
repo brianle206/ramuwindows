@@ -1,1 +1,18 @@
 <h2 class='black'>Quiz Scores</h2>
+<table class='table'>
+	<tr>
+		<th>Quiz</th>
+		<th>Your Score</th>
+		<th>Attempts</th>
+		<th>Retakeable?</th>
+	</tr>
+<% find_users_quiz_score %>
+	<% @user_scores.each do |score| %>
+		<tr class=''>
+			<td><%= find_quiz_title(score.quiz_id) %> </td>
+			<td class='text-center'><%= score.score %> % </td>
+			<td class='text-center'><%= score.attempts %></td>
+			<td class='text-center'><%= score.retake %></td>
+		</tr>
+	<% end %>
+</table>

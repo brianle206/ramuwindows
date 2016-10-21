@@ -1,0 +1,87 @@
+<nav class="navbar navbar-default navbar-fixed-top" id='navigation'>
+	<div class="text-center">
+		<%= link_to "RAM University", root_path, class: "logo" %>
+	</div>
+	<div class="container">
+		<% if !user_signed_in? || !current_user.admin %>
+		<ul class="nav navbar-nav navbar-right">
+			
+			<% Category.all.each do |category| %>
+			<li>
+				<%= link_to category.name, articles_path(category: category.name), :class=>"category" %>
+			</li>
+			<% end %>
+			<li>
+				<%= link_to "Learn", learn_index_path, class: "category" %>
+			</li>
+		</ul>
+		<% end %>
+		<% if current_user.try(:admin?) %>
+		<ul class="nav navbar-nav navbar-right">
+			<li>
+				<%= link_to "Dashboard", "/admin" %>
+			</li>
+		</ul>
+		<% end %>
+		<ul class="nav navbar-nav navbar-right">
+			<li class="vertical-align">
+				<form action="/search">
+					<%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+					<%= submit_tag "Search" %>
+				</form>
+			</li>
+			<% if !user_signed_in? %>
+			<li>
+				<%= link_to "Sign In", new_user_session_path %>
+			</li>
+			<% end %>
+			<% if user_signed_in? %>
+			<li>
+				<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+			</li>
+			<% if !current_user.try(:admin?) %>
+			<li>
+				<%= link_to "Dashboard", dashboard_index_path %>
+			</li>
+			<% end %>
+		<% end %>
+		</ul>
+	</div>
+</nav>
+<p class="notice">
+	<%= notice  %>
+</p>
+<p class="alert">
+	<%= alert %>
+</p>
+<% if !current_user.try(:admin?) && user_signed_in? %>
+	<%= render '/dashboard/user_dashboard' %>
+<% end %>
+<div class="container">
+	<div class="row">
+		<% if current_user.try(:admin?) %>
+		<ul class="nav navbar-nav navbar-left">
+			<li>
+				<%= link_to "Home", root_path, class: "list-group-item" %>
+			</li>
+			<% Category.all.each do |category| %>
+			<li>
+				<%= link_to category.name, admin_index_path(category: category.name), class: "list-group-item" %>
+			</li>
+			<% end %>
+			<li>
+				<%= link_to "New Article", new_article_path, class: "btn btn-primary" %>
+			</li>
+			<li>
+				<%= link_to("Manage", "/admin/manage", class: "btn btn-warning")  %>
+			</li>
+			<li>
+				<%= link_to "Create Learning Module", learn_index_path, class: "btn btn-primary" %>
+			</li>
+			<li>
+				<%= link_to "Create Quiz", quiz_index_path %>
+			</li>
+		</ul>
+		<% end %>
+	</div>
+</div>

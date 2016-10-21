@@ -1,18 +1,16 @@
 %h1= @section.title
 
-Add this course now to start your journey on becoming RAM certified!
 -if current_user
 	-is_enrolled(params[:id])
 	-if @enrolled != true
+		Add this course now to start your journey on becoming RAM certified!
 		.btn.btn-default= link_to "Add Course", "/add/course/#{@section.id}"
 
 
 -if current_user && !current_user.try(:admin?)
 	
 	- @lectures.each do |l|
-		%h2= link_to l.title, "/learn/#{@section.id}/lecture/#{l.id}"
-		=markdown(l.content)
-	
+		=render partial: 'learn/lecture_show', locals: {:lecture => l}
 -else
 	- @lectures.each do |l|
 		%h2= l.title

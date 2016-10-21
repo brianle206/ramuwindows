@@ -8,4 +8,8 @@ module LearnHelper
 			end
 		end
 	end
+	def find_status(params)
+	    @lecture = Lecture.find(params)
+	    @status = Complete.where(user_id: current_user.id, lecture_id: @lecture.id)
+  	end
 end

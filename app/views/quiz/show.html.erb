@@ -1,33 +1,45 @@
-
-
-<h1><%= @quiz.title %></h1>
-	<% @questions.each do |q| %>
-		<% @taken_already = UserQuizAnswer.where(quiz_id: @quiz.id, user_id: current_user.id, question_id: q.id) %>
-			<% if @taken_already.blank?  %>
-			<%= form_for UserQuizAnswer.new, :url => "/learn/#{params[:id]}/quiz/#{current_user.id}" do |f| %>
-				<%= f.hidden_field :quiz_id, value: "#{@quiz.id}" %>
-				<%= f.hidden_field :learn_id, value: "#{params[:id]}" %>
-				<%= f.hidden_field :user_id, value: "#{current_user.id}" %>
-				<%= f.hidden_field :question_id, value: "#{q.id}" %>
-				<h1><%= f.label :question, value: "#{q.question}" %></h1>	
-				<%= f.collection_select(:answer_id, q.answers, :id, :content) %>
+<!-- 
+<div class='quizCard'>
+	<h1 class='text-center'><%#= @quiz.title %></h1>
+	<%#= @questions.count %>
+			<%#= form_for UserQuizAnswer.new, :url => "/learn/#{params[:id]}/quiz/#{current_user.id}" do |f| %>
+	<#% @questions.each do |q| %>
+		<#% @taken_already = UserQuizAnswer.where(quiz_id: @quiz.id, user_id: current_user.id, question_id: q.id) %>
+			<#% if @taken_already.blank?  %>
+				<%#= f.hidden_field :quiz_id, value: "#{@quiz.id}" %>
+				<%#= f.hidden_field :learn_id, value: "#{params[:id]}" %>
+				<%#= f.hidden_field :user_id, value: "#{current_user.id}" %>
+				<%#= f.hidden_field :question_id, value: "#{q.id}" %>
+				<h1><%#= f.label :question, value: "#{q.question}" %></h1>	
+				<%#= f.collection_select(:answer_id, q.answers, :id, :content) %>
+			<%# end %>
+		<%# end %>
 				<input type='submit' value='Submit' class='btn btn-warning'>
-			<% end %>
-		<% end %>
+	<%# end %>
+</div> -->
+<div class='quizCard'>
+<h1><%= @quiz.title %></h1>
+ <%= form_tag do %>
+ <%= hidden_field :quiz_id, params[:qid] %>
+  <ol class="questions">
+   <% @questions.each do |question| %>
+   <li>
+   <h1><%= question.question %></h1>
+     <ol class="answers">
+     <% question.answers.each do |answer| %>
+      <li>
+        <%= radio_button_tag("answer[#{question.id}]", answer.id) %>
+        <%= label("answer_".concat(answer.id.to_s).to_sym, answer.content) %>
+      </li>
+     <% end %>
+     </ol>
+   </li>
+   <% end %>
+  </ol>
 
-	<% end %>
-<%= will_paginate @questions %>
-			<% check_user_answers(@quiz.id) %>
-				<% for answer in @userAnswer %>
-					<% answer_content(answer.answer_id) %>
-					<% question_content(answer.question_id) %>
-					<li><h1><%= @question.question %></h1></li>
-						<li><strong>Correct Answer: </strong> <%= @question.answer %></li>
-						<li><strong>Your Answer:</strong> <%= @answer %></li>
-						<% if @question.answer == @answer %>
-							<% @correct += 1 %>
-						<% end %>
-				<% end %>
-					<%= @correct %> / <%= @questions %> 
-				<% @percentage = @correct.to_f/@questions %>
-				<h1>Your score is <%= @percentage *100%> %</h1>
+  <div><%= submit_tag("Submit", :class => "btn btn-warning") %></div>
+
+<% end %>
+</div>
+
+	
