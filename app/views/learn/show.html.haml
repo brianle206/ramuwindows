@@ -11,15 +11,11 @@
 	
 	- @lectures.each do |l|
 		=render partial: 'learn/lecture_show', locals: {:lecture => l}
+-elsif current_user.try(:admin?)
+	- @lectures.each do |l|
+		=render partial: 'learn/lecture_show', locals: {:lecture => l}
 -else
 	- @lectures.each do |l|
 		%h2= l.title
 
--if current_user.try(:admin?)
-	.btn.btn-default
-		= link_to "Create Lecture", "/learn/#{@section.id}/add_lecture"
-
-	.btn.btn-default
-		= link_to "Destroy", "/learn/#{@section.id}", method: 'DELETE'
-
-=will_paginate @lectures
+	=will_paginate @lectures

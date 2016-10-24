@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   #Learn Routes and Lectures
   get '/learn/:id/add_lecture' => 'learn#add_lecture'
   get '/learn/:id/lecture/:lid' => 'learn#lecture_show'
-  get '/learn/:id/lecture/:lid/edit' => 'learn#lecture_edit'
+  get '/learn/:id/lecture/:lid/edit' => 'learn#lecture_edit' 
   post '/learn/:id/create_lecture' => 'learn#create_lecture'
   get '/admin' => 'admin#index', as: :admin_path
   delete '/learn/:id/lecture/:lid' => 'learn#lecture_destroy'

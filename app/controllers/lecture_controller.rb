@@ -1,7 +1,10 @@
 class LectureController < ApplicationController
 	before_action :find_lecture, only: [:destroy]
-  before_action :find_lec_edit, except: [:edit]
+  before_action :find_lec_edit, except: [:edit, :index]
   before_action :authenticate_user!
+  def index
+    @learn = Learn.all
+  end
   def create
   end
 

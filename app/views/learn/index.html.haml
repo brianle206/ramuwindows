@@ -4,6 +4,8 @@
 		-if current_user.try(:admin?)
 			.btn.btn-default
 				=link_to "Create New Learning Section", new_learn_path
+			.btn.btn-default
+				=link_to "Lecture List",  lecture_index_path
 
 	- @module.each do |m|
 		=link_to learn_path(m) do
