@@ -71,7 +71,7 @@ class LearnController < ApplicationController
   private
 
   def find_lecture
-    @lecture = Lecture.where(learn_id: params[:id]).order('id ASC')
+    @lecture = Lecture.where(learn_id: params[:id]).order('id DESC')
   end
 
   def this_lecture
