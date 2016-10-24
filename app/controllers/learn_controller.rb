@@ -69,24 +69,31 @@ class LearnController < ApplicationController
   end
 
   private
+
   def find_lecture
     @lecture = Lecture.where(learn_id: params[:id]).order('id ASC')
   end
+
   def this_lecture
     @lecture = Lecture.find(params[:lid])
   end
+
   def lecture_params
     params.require(:lecture).permit(:title, :content, :learn_id)
   end
+
   def learn_params
     params.require(:learn).permit(:title)
   end
+
   def find_section
     @section = Learn.find(params[:id])
     @lectures = @section.lectures.page(params[:page]).per_page(1)
   end
+
   def find_status
     @lecture = Lecture.find(params[:lid])
     @status = Complete.where(user_id: current_user.id, lecture_id: @lecture.id)
   end
+  
 end

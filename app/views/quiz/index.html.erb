@@ -4,6 +4,7 @@
 	<li><%= course.title %></li>
 		<% course.quizzes.each do |quiz| %>
 			<%=link_to quiz.title, edit_quiz_path(quiz) %>
+			<%=link_to "Destroy", "/quiz/#{quiz.id}", :method => "delete" %>
 		<% end %>
 		<li><%= link_to "Create Quiz For this course", "/learn/#{course.id}/quiz/new" %></li>
 <% end %>

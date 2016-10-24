@@ -5,9 +5,18 @@
 	</div>
 	<%= f.fields_for :questions do |builder| %>
 		<fieldset>
-			<% render 'question_fields', f: builder %>
+		<%= builder.label :question, "Question" %></br>
+		<%= builder.text_area :question, :rows => 3 %></br>
+		<%= builder.label :answer, "Real Answer" %> </br>
+		<%= builder.text_field :answer %></br>
+		<%= builder.check_box :_destroy %>
+		<%= builder.label :_destroy, "Remove Question" %>
 		</fieldset>
+		<%= builder.fields_for :answers do |builder| %>
+			<%= render 'answer_fields', :f => builder %>
+		<% end %>
+		<p><%= link_to_add_fields "Add Answer", f, :answers %></p>
 	<% end %>
 	<p><%= link_to_add_fields "Add Question", f, :questions %></p>
-	<p><%=f.submit "Submit" %></p>
+	<p><%=f.submit  %></p>
 <% end %>

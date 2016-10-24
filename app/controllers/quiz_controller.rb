@@ -4,7 +4,7 @@ class QuizController < ApplicationController
   end
 
   def new
-    @quiz = Quiz.new
+    @quizz = Quiz.new
   end
 
   def edit
@@ -12,6 +12,10 @@ class QuizController < ApplicationController
   end
 
   def update
+    @quiz = Quiz.find(params[:id])
+    if @quiz.update(quiz_params)
+      redirect_to root_path
+    end
   end
 
   def create
@@ -67,14 +71,16 @@ class QuizController < ApplicationController
   end
 
   def destroy
+    @quiz = Quiz.find(params[:id])
+    @quiz.destroy
   end
 
   private 
 
   def quiz_params
     params.require(:quiz).permit(:title, :learn_id, 
-      questions_attributes:[:question, :answer, :quiz_id,
-        answers_attributes:[:content, :question_id]]
+      questions_attributes:[:id, :question, :answer, :quiz_id, :_destroy,
+        answers_attributes:[:id ,:content, :question_id, :_destroy]]
       )
   end
 
