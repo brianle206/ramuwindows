@@ -1,8 +1,8 @@
 class CreateCourses < ActiveRecord::Migration
   def change
     create_table :courses do |t|
-      t.references :users 
-      t.references :learn 
+      t.integer :user_id 
+      t.integer :learn_id
 
       t.timestamps null: false
     end
