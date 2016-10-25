@@ -27,7 +27,7 @@ class QuizController < ApplicationController
   end
   def show
     @quiz = Quiz.find(params[:qid])
-    @questions = Question.where(quiz_id: @quiz.id).sample(1)
+    @questions = Question.where(quiz_id: @quiz.id).sample(5)
   end
 
   def create_user_answer
