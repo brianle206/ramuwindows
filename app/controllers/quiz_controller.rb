@@ -27,7 +27,7 @@ class QuizController < ApplicationController
   end
   def show
     @quiz = Quiz.find(params[:qid])
-    @questions = @quiz.questions.limit(5).order('RANDOM()')
+    @questions = Question.where(quiz_id: @quiz.id).sample(1)
   end
 
   def create_user_answer
