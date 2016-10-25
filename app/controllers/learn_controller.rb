@@ -22,6 +22,7 @@ class LearnController < ApplicationController
   end
   
   def show
+    @lecture = Lecture.where(learn_id: params[:id]).order('id ASC')
   end
   
   def update
@@ -71,7 +72,7 @@ class LearnController < ApplicationController
   private
 
   def find_lecture
-    @lecture = Lecture.where(learn_id: params[:id]).order('created_at ASC')
+    @lecture = Lecture.where(learn_id: params[:id])
   end
 
   def this_lecture
@@ -88,7 +89,7 @@ class LearnController < ApplicationController
 
   def find_section
     @section = Learn.find(params[:id])
-    @lectures = @section.lectures.page(params[:page]).per_page(1)
+    @lectures = @section.lectures.page(params[:page]).per_page(1).order('id ASC')
   end
 
   def find_status
