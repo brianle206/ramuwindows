@@ -1,7 +1,8 @@
 Lecture Index
 <% @learn.each do |learn| %>
 	<h2><%= learn.title %></h2>
-	<% learn.lectures.each do |lecture| %>
+	<%= link_to "New Lecture", "/learn/#{learn.id}/add_lecture"%>
+ 	<% learn.lectures.each do |lecture| %>
 	<p><%= lecture.title %></p><%= link_to "Edit", "/learn/#{learn.id}/lecture/#{lecture.id}/edit" %>
 	<% end %>
 <% end %>

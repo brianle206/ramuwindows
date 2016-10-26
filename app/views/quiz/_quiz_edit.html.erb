@@ -1,22 +1,28 @@
-<%= simple_form_for @quiz do |f| %>
-	<div class='field'>
-		<%= f.label :title %><br>
-		<%= f.text_field :title %>
-	</div>
-	<%= f.fields_for :questions do |builder| %>
-		<fieldset>
-		<%= builder.label :question, "Question" %></br>
-		<%= builder.text_area :question, :rows => 3 %></br>
-		<%= builder.label :answer, "Real Answer" %> </br>
-		<%= builder.text_field :answer %></br>
-		<%= builder.check_box :_destroy %>
-		<%= builder.label :_destroy, "Remove Question" %>
-		</fieldset>
-		<%= builder.fields_for :answers do |builder| %>
-			<%= render 'answer_fields', :f => builder %>
-		<% end %>
-		<p><%= link_to_add_fields "Add Answer", f, :answers %></p>
+<div class='col-xs-10 col-xs-offset-1'>
+	<%= simple_form_for @quiz do |f| %>
+		<div class='form-inputs'>
+			<div class='field'>
+				<%= f.label :title %><br>
+				<%= f.text_field :title, class: 'form-control' %>
+			</div>
+				<%= f.fields_for :questions do |builder| %>
+					<div class='question-box'>
+						<fieldset>
+							<%= builder.label :question, "Question" %></br>
+							<%= builder.text_area :question, :rows => 3, class: 'form-control' %></br>
+							<%= builder.label :answer, "Real Answer" %> </br>
+							<%= builder.text_field :answer, class: 'form-control' %></br>
+							<%= builder.check_box :_destroy %>
+							<%= builder.label :_destroy, "Remove Question" %>
+						</fieldset>
+						<%= builder.fields_for :answers do |builder| %>
+							<%= render 'answer_fields', :f => builder %>
+						<% end %>
+						<p><%= link_to_add_fields "Add Answer", f, :answers %></p>
+					</div>
+				<% end %>
+			<p><%= link_to_add_fields "Add Question", f, :questions %></p>
+			<p><%=f.submit  %></p>
+		</div>
 	<% end %>
-	<p><%= link_to_add_fields "Add Question", f, :questions %></p>
-	<p><%=f.submit  %></p>
-<% end %>
+</div>
