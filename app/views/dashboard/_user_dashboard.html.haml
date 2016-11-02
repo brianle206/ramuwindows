@@ -7,26 +7,49 @@
 
 	
 	
-%header
-  %span.toggle-button
-    .menu-bar.menu-bar-top
-    .menu-bar.menu-bar-middle
-    .menu-bar.menu-bar-bottom
-  .menu-wrap
-    .menu-sidebar
-      %ul.menu
-      -courses
-      - if @courses.empty?
-        %h3 You are currently not enrolled in any courses
-      - else
-        -@courses.each do |course|
-        -find_learn(course.learn_id)
-          -@learn.each do |learn| 
-            %h4=link_to learn.title, "/learn/#{learn.id}", class: "darkGrey"
-            -learn.lectures.each do |lecture|
-              %li=link_to lecture.title, "/learn/#{learn.id}/lecture/#{lecture.id}"
+/ %header
+/   %span.toggle-button
+/     .menu-bar.menu-bar-top
+/     .menu-bar.menu-bar-middle
+/     .menu-bar.menu-bar-bottom
+/   .menu-wrap
+/     .menu-sidebar
+/       %ul.menu
+/       -courses
+/       - if @courses.empty?
+/         %h3 You are currently not enrolled in any courses
+/       - else
+/         -@courses.each do |course|
+/         -find_learn(course.learn_id)
+/           -@learn.each do |learn| 
+/             %h4=link_to learn.title, "/learn/#{learn.id}", class: "darkGrey"
+/             -learn.lectures.each do |lecture|
+/               %li=link_to lecture.title, "/learn/#{learn.id}/lecture/#{lecture.id}"
 
 
+%span.toggle-button
+  .menu-bar.menu-bar-top
+  .menu-bar.menu-bar-middle
+  .menu-bar.menu-bar-bottom
+.menu-wrap
+  .menu-sidebar
+    %ul.menu
+    - courses
+    - if @courses.empty?
+      %h3 You are currently not enrolled in any courses
+    - else
+      - @courses.each do |course|
+        .row
+          - find_learn(course.learn_id)
+          - @learn.each do |learn|
+            .dropdown
+              %h4.dropdown-toggle{"data-toggle" => "dropdown"}
+                = learn.title
+                %span.caret
+              %ul.dropdown-menu.relative
+                - learn.lectures.each do |lecture|
+                  %li
+                    = link_to lecture.title, "/learn/#{learn.id}/lecture/#{lecture.id}"
 
 
 

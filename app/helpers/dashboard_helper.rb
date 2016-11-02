@@ -1,7 +1,9 @@
 module DashboardHelper
 
 	def courses
-    	@courses = Course.where(users_id: current_user.id)
+    	@courses = Course.where(user_id: current_user.id)
+    rescue
+    	nil
 	end
 
 	def find_learn(id)

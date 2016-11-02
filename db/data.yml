@@ -1,0 +1,1055 @@
+---
+answers:
+  columns:
+  - id
+  - question_id
+  - content
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - '1'
+    - 'yes'
+    - '2016-10-12 20:50:27.960566'
+    - '2016-10-12 20:50:27.960566'
+  - - '2'
+    - '1'
+    - probably not
+    - '2016-10-12 20:50:27.962586'
+    - '2016-10-24 20:18:55.988555'
+  - - '3'
+    - '2'
+    - Maybe
+    - '2016-10-12 21:17:29.303061'
+    - '2016-10-12 21:17:29.303061'
+  - - '4'
+    - '2'
+    - 'No'
+    - '2016-10-12 21:17:29.30487'
+    - '2016-10-12 21:17:29.30487'
+  - - '5'
+    - '2'
+    - Whats that?
+    - '2016-10-12 21:17:29.305988'
+    - '2016-10-12 21:17:29.305988'
+  - - '6'
+    - '2'
+    - 'yes'
+    - '2016-10-12 21:17:29.307024'
+    - '2016-10-12 21:17:29.307024'
+  - - '7'
+    - '3'
+    - for what?
+    - '2016-10-12 21:17:29.309656'
+    - '2016-10-12 21:17:29.309656'
+  - - '8'
+    - '3'
+    - I was born ready
+    - '2016-10-12 21:17:29.310963'
+    - '2016-10-12 21:17:29.310963'
+  - - '9'
+    - '3'
+    - Moderately
+    - '2016-10-12 21:17:29.312079'
+    - '2016-10-12 21:17:29.312079'
+  - - '10'
+    - '3'
+    - other
+    - '2016-10-12 21:17:29.313194'
+    - '2016-10-12 21:17:29.313194'
+  - - '11'
+    - '3'
+    - Ecstatic!
+    - '2016-10-12 21:17:29.314222'
+    - '2016-10-12 21:17:29.314222'
+
+---
+articles:
+  columns:
+  - id
+  - title
+  - content
+  - created_at
+  - updated_at
+  - user_id
+  - category_id
+  records: 
+  - - '2'
+    - Random Videos
+    - "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/hYpkfxI5DPQ\"
+      frameborder=\"0\" allowfullscreen></iframe>\r\n\r\n<iframe width=\"560\" height=\"315\"
+      src=\"https://www.youtube.com/embed/9H6et_2UeEs\" frameborder=\"0\" allowfullscreen></iframe>"
+    - '2016-08-04 19:30:27.212693'
+    - '2016-08-31 16:06:07.769833'
+    - '1'
+    - '3'
+  - - '3'
+    - lorem
+    - 'ipsuomerherhe '
+    - '2016-08-04 20:35:28.393561'
+    - '2016-08-04 21:58:37.70208'
+    - '1'
+    - '1'
+  - - '4'
+    - Mounting Fork Base
+    - 'lorem lorem lorem lorem '
+    - '2016-08-04 20:52:09.275411'
+    - '2016-08-04 20:52:09.275411'
+    - '1'
+    - '1'
+  - - '7'
+    - How to write an article
+    - "**This is bold**\r\n### heading text\r\n[Click Me](http://rammount.com/ru)\r\n\r\n\r\n-
+      something\r\n- else\r\n- dododod\r\n\r\n`function click(){\r\n    console.log(\"Hello
+      World\");\r\n}`"
+    - '2016-08-17 15:29:27.820012'
+    - '2016-08-17 15:29:27.820012'
+    - '1'
+    - '1'
+  - - '8'
+    - Rubber Ball And Socket Design
+    - Intro about Rubber Balls and Sockets or something
+    - '2016-08-17 15:41:35.222358'
+    - '2016-08-22 20:02:16.515181'
+    - '1'
+    - '4'
+  - - '9'
+    - Motor Cycle FAQs
+    - "- **Will the RAM-B-342U work on my bike?**\r\n\r\n> The 342 will work on any
+      bike with a hollow un-capped stem between 12 - 33mm (.5” – 1.29”). This is most
+      sport bike stems. It will not work if the bike has a cap over the stem hole.\r\n\r\n-
+      **What cradle is right for my device?**\r\n\r\n> I only recommend the X-Grip
+      for phones or the form fitting cradles. I stay away from the UN4 and PD3 as
+      they do not offer a second layer of security.  Anything iPhone 6 size or larger
+      I suggest they use the UN10 as it will not hit the buttons, most of the Galaxy
+      phones are the same way. \r\n\r\n- **How do I minimize vibration in my RAM Mount?**\r\n\r\n>
+      Shortest arm possible, choose a mounting point with less vibration to transfer.
+      Hand control mounts on long/tall bars vibrate the most. Stem/Tank mounts vibrate
+      very little. \r\n\r\n- **What base is right for my motorcycle?**\r\n\r\n> All
+      of the bases are universal, there is no one base designed for any specific motorcycle.
+      Sport bike buyers tend to gravitate towards the stem mount more than anything
+      else. V-Twin buyers towards a standard handlebar style mount. Adventure and
+      sport touring buyers run the gamut but typically require the most assistance
+      and guidance towards making a purchase. I do not typically recommend the EZ
+      Strap, EZ On/Off or any snap link products for motorcycles. \r\n\r\n- **What
+      is the difference in performance between composite and aluminum arms? **\r\n\r\n>
+      For most motorcycle applications either material is suitable. When discussing
+      features and benefits I typically highlight the weight reduction of the composite
+      parts and the durability of the aluminum parts. I do not suggest any “light
+      duty” part such as RAP-B-201-1U for motorcycle applications. \r\n\r\n- **What
+      is the shortest, most low profile arm you offer?**\r\n\r\n> Any of the RAM ball
+      and socket arms have the ability to lay flat to create a very low profile connection
+      point. The shortest and lowest profile arms are the RAM/RAP-B-201U-A\r\n\r\n-
+      **How do I make my RAM Mount more secure?**\r\n\r\n> A tether if you’re not
+      using one already, glued on tips, replace the knob with a ¼-20 nylon lock nut.
+      \r\n\r\n- **My phone/device fell from its mount and is damaged, does your warranty
+      cover devices?**\r\n\r\n> No, our warranty does not cover devices, only the
+      mounting hardware itself. Have the customer contact support@rammount.com and
+      we will take care of them. \r\n\r\n- **Where can I get replacement knobs, washers,
+      caps etc. for my mount?**\r\n\r\n> Contact support@rammount.com and we will
+      help you determine part numbers and source replacement hardware. \r\n\r\n- **What
+      size cups will your cup holders accommodate?**\r\n\r\n> Our cup holders are
+      compatible with any cups, cans, bottles or mugs ranging from 2.5” to 3.5” diameter.\r\n"
+    - '2016-08-17 20:15:17.626263'
+    - '2016-08-17 21:50:19.568048'
+    - '1'
+    - '5'
+  - - '10'
+    - testing
+    - "\r\n<div>\r\n  <div class='activity-header paddlesports'>\r\n    <div class='container'>\r\n
+      \     <h1 class='heading-2 white bigFont'>Paddlesports</h1>\r\n    </div>\r\n
+      \ </div>\r\n  <div class='fluffer-bottom'>\r\n    <div class='container'>\r\n
+      \     <div class='col-sm-7'>\r\n        <p>Get the most out of your paddlesport
+      adventures by taking your favorite gear with you. The rugged modularity of RAM
+      Mounts lets you secure virtually any device to your kayak or paddleboard, including
+      fishing rods, fishfinders, phones, tablets, cameras, cup holders and much more.
+      <!-- No matter what you want to take with you out on the water, RAM Mounts will
+      always offer the best mounting solution. --></p>\r\n    </div>\r\n    <div class='shadowbox2
+      modal-close2'></div>\r\n    <div class='modal-devices video' id='player'>\r\n
+      \     <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/CbP2z6IgFfs?rel=0&amp;showinfo=0\"
+      frameborder=\"0\" allowfullscreen></iframe>\r\n    </div>\r\n    <div class='col-sm-4'>\r\n
+      \     <p class='bookmark'><a class='breadcrumb-link' href='/activity'>Activity</a>&nbsp;//
+      <strong>Paddlesports</strong></p>\r\n      <div class=\"col-sm-8\">\r\n       <!--
+      \ <div class=\"modal-open2\" style=\"cursor:pointer;\">\r\n          <img src=\"/images/device/rod-holder/fishing-video-icon-black.png\"\r\n
+      \           onmouseenter=\"this.src='/images/device/rod-holder/fishing-video-icon-red.png'\"\r\n
+      \           onmouseleave=\"this.src='/images/device/rod-holder/fishing-video-icon-black.png'\">\r\n
+      \       </div> -->\r\n         <a class=\"fancybox fancybox.iframe\" href=\"https://www.youtube.com/embed/CbP2z6IgFfs?autoplay=1&wmode=opaque\"><img
+      src=\"/images/device/rod-holder/fishing-video-icon-black.png\"\r\n            onmouseenter=\"this.src='/images/device/rod-holder/fishing-video-icon-red.png'\"\r\n
+      \           onmouseleave=\"this.src='/images/device/rod-holder/fishing-video-icon-black.png'\"></a>
+      \   \r\n      </div>\r\n    </div>\r\n  </div>    \r\n</div> <!-- End of Section
+      -->\r\n\r\n<div class='section-black'>\r\n  <div class='container'>\r\n    <div
+      class='col-sm-15'>\r\n      <div class='device-icon-block'>\r\n        <a class='phone-mount-menu'
+      href=\"#fishfinder\">Fishfinders & Chartplotters</a>\r\n      </div>\r\n    </div>\r\n
+      \   <div class='col-sm-15'>\r\n      <div class='device-icon-block'>\r\n        <a
+      class='phone-mount-menu' href=\"#fishingrod\">Fishing Rod Holders</a>\r\n      </div>
+      \r\n    </div>\r\n    <div class='col-sm-15'>\r\n      <div class='device-icon-block'>\r\n
+      \       <a class='phone-mount-menu' href=\"#gadgets\">Device Mounts</a>\r\n
+      \     </div>\r\n    </div>\r\n    <div class='col-sm-15'>\r\n      <div class='device-icon-block'>\r\n
+      \       <a class='phone-mount-menu' href=\"#transducer\">Transducer Arms</a>\r\n
+      \     </div>\r\n    </div>\r\n    <div class='col-sm-15'>\r\n      <div class='device-icon-block'>\r\n
+      \       <a class='phone-mount-menu' href=\"#anchor\">Anchor Lock</a>\r\n      </div>\r\n
+      \   </div>\r\n  </div>\r\n</div> <!-- End of Nav Bar -->\r\n<%= render 'static_pages/partials/blue_bar'
+      %>\r\n\r\n\r\n<div id='fishfinder' class='grey fluffer'>\r\n  <%= render 'static_pages/activity/fishing/marine_electronics'
+      %>\r\n</div> <!-- End of Section 2 -->\r\n<div id='fishfinder' class='fluffer'>\r\n
+      \ <%= render 'static_pages/activity/fishing/rod_holders' %>\r\n</div> <!-- End
+      of Section 2 -->\r\n<div id='gadgets' class='fluffer section-grey'>\r\n  <%=
+      render 'static_pages/activity/fishing/gadgets' %>\r\n</div><!-- End of Section
+      3 -->\r\n\r\n\r\n<div id='transducer' class='fluffer'>\r\n  <div class='container'>\r\n
+      \   <div class=\"flex-gallery\">\r\n      <div class='col-sm-5'>\r\n        <div
+      class='flex-image big'>\r\n          <img class='full-width' src=\"/images/activity/paddlesports/transducer_main.jpg\">
+      \r\n        </div>\r\n        <div class=\"flex-thumbs\">\r\n          <img
+      src=\"/images/activity/paddlesports/transducer_main.jpg\">\r\n          <img
+      video-src=\"p_zUZNTn26g\" height=\"253\" width=\"450\">\r\n          <img src=\"/images/activity/paddlesports/transducer_1.jpg\">\r\n
+      \         <img src=\"/images/activity/paddlesports/transducer_2.jpg\">\r\n        </div>\r\n\r\n
+      \     </div>\r\n      <div class='col-sm-7'>\r\n        <h2 class='heading-2'>Transducer
+      Arms</h2>\r\n        <p>Kayak fishing is all about adaptability. Now available
+      with all other kayak mounting accessories, RAM now offers a deployable transducer
+      arm for kayaks. This solution enables the quick and effective deployment and
+      retrieval of your transducer, while protecting your transducer from damage.
+      Perfect for kayak applications, the transducer arm can quickly be retrieved
+      if you enter shallow water or when beaching your kayak. The unique design provides
+      a universal solution for virtually any kayak as well as any transducer. </p>\r\n
+      \       <div class='col-sm-3'>\r\n          <a class='button buttons-on-white
+      centered-image fixed-width' href=\"/search?facets[device][]=Transducer\">Shop</a>\r\n
+      \       </div> \r\n      </div>  \r\n    </div>\r\n  </div>\r\n</div> <!-- End
+      of Section 4 -->\r\n\r\n<div id='anchor' class='fluffer section-grey'>\r\n  <div
+      class='container'>\r\n    <div class='flex-gallery'>\r\n    <br><br>\r\n      <div
+      class='col-sm-7'>\r\n        <h2 class='heading-2'>Anchor Line Lock</h2>\r\n
+      \       <p>The RAM Anchor Line Lock can with used with any anchor line up to
+      1/2\" in diameter, offering a compact and durable solution with smooth and easy
+      operation. Available as a flush mounted system, or with any post/spline receiver.</p>\r\n
+      \       <div class='col-sm-4'>\r\n          <a href=\"/search?search_type=search&query=rap-357\"
+      class='button buttons-on-grey centered-image fixed-width'>Shop</a> \r\n        </div>\r\n
+      \     </div>\r\n      <div class='col-sm-5'>\r\n        <div class='flex-image
+      big'>\r\n          <img class='full-with' src=\"/images/activity/paddlesports/anchor_main.jpg\">\r\n
+      \       </div>\r\n        <div class=\"flex-thumbs\">\r\n          <img src=\"/images/activity/paddlesports/anchor_main.jpg\">\r\n
+      \         <img src=\"/images/activity/paddlesports/anchor_1.jpg\">\r\n          <img
+      src=\"/images/activity/paddlesports/anchor_2.jpg\">\r\n        </div>\r\n      </div>\r\n
+      \   </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- YOUTUBE API SOLUTION FOR VIDEO
+      DOESN'T QUITE WORK YET\r\n<script>\r\n  // 2. This code loads the IFrame Player
+      API code asynchronously.\r\n  var tag = document.createElement('script');\r\n\r\n
+      \ tag.src = \"https://www.youtube.com/iframe_api\";\r\n  var firstScriptTag
+      = document.getElementsByTagName('script')[0];\r\n  firstScriptTag.parentNode.insertBefore(tag,
+      firstScriptTag);\r\n\r\n  // 3. This function creates an <iframe> (and YouTube
+      player)\r\n  //    after the API code downloads.\r\n  var player;\r\n  function
+      onYouTubeIframeAPIReady() {\r\n    player = new YT.Player('player', {\r\n      height:
+      '390',\r\n      width: '640',\r\n      videoId: 'CbP2z6IgFfs',\r\n      events:
+      {\r\n        'onReady': onPlayerReady\r\n      }\r\n    });\r\n  }\r\n\r\n  function
+      pauseVideo() {\r\n    player.pauseVideo();\r\n  }\r\n\r\n  // 4. The API will
+      call this function when the video player is ready.\r\n  function onPlayerReady(event)
+      {\r\n    $('.modal-open2').bind('click', function() {\r\n      event.target.playVideo();\r\n
+      \   });\r\n    $('.modal-close2').bind('click', function() {\r\n      pauseVideo();\r\n
+      \   });\r\n  }\r\n</script>\r\n-->"
+    - '2016-08-31 16:02:31.685094'
+    - '2016-10-20 23:31:18.33064'
+    - '1'
+    - '2'
+  - - '11'
+    - Test
+    - 'This is a Test '
+    - '2016-08-31 16:40:47.611824'
+    - '2016-08-31 16:40:47.611824'
+    - '1'
+    - '4'
+
+---
+categories:
+  columns:
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - Products
+    - '2016-08-04 20:46:19.381452'
+    - '2016-08-17 15:34:58.622758'
+  - - '2'
+    - Drawings
+    - '2016-08-04 20:46:53.806654'
+    - '2016-08-04 20:46:53.806654'
+  - - '3'
+    - Videos
+    - '2016-08-04 20:47:02.779104'
+    - '2016-08-04 20:47:02.779104'
+  - - '5'
+    - FAQs
+    - '2016-08-17 15:34:07.392708'
+    - '2016-08-17 15:34:07.392708'
+  - - '6'
+    - Certification
+    - '2016-08-17 15:36:10.44543'
+    - '2016-08-17 15:36:10.44543'
+
+---
+completes:
+  columns:
+  - id
+  - user_id
+  - lecture_id
+  - status
+  - created_at
+  - updated_at
+  - learn_id
+  records: 
+  - - '1'
+    - '2'
+    - '13'
+    - true
+    - '2016-08-23 16:56:31.890044'
+    - '2016-10-05 17:46:41.248746'
+    - '8'
+  - - '2'
+    - '2'
+    - '16'
+    - true
+    - '2016-08-23 17:02:57.595635'
+    - '2016-10-05 17:53:40.107616'
+    - '8'
+  - - '3'
+    - '4'
+    - '13'
+    - true
+    - '2016-08-29 21:35:15.38473'
+    - '2016-10-05 17:53:47.834471'
+    - '8'
+  - - '4'
+    - '2'
+    - '23'
+    - true
+    - '2016-10-05 18:02:25.62521'
+    - '2016-10-05 18:02:25.62521'
+    - '111'
+  - - '5'
+    - '2'
+    - '17'
+    - true
+    - '2016-10-05 18:02:53.220334'
+    - '2016-10-05 18:02:53.220334'
+    - '11'
+  - - '6'
+    - '2'
+    - '24'
+    - true
+    - '2016-10-05 19:15:15.88945'
+    - '2016-10-05 19:15:15.88945'
+    - '107'
+  - - '7'
+    - '2'
+    - '25'
+    - true
+    - '2016-10-05 19:15:47.632734'
+    - '2016-10-05 19:15:47.632734'
+    - '107'
+  - - '8'
+    - '2'
+    - '26'
+    - true
+    - '2016-10-05 19:15:57.145324'
+    - '2016-10-05 19:15:57.145324'
+    - '107'
+  - - '9'
+    - '4'
+    - '24'
+    - true
+    - '2016-10-05 19:19:32.035801'
+    - '2016-10-05 19:19:32.035801'
+    - '107'
+  - - '10'
+    - '4'
+    - '17'
+    - true
+    - '2016-10-05 19:20:42.780127'
+    - '2016-10-05 19:20:42.780127'
+    - '11'
+  - - '11'
+    - '4'
+    - '25'
+    - true
+    - '2016-10-05 20:40:21.104911'
+    - '2016-10-05 20:40:21.104911'
+    - '107'
+  - - '12'
+    - '4'
+    - '30'
+    - true
+    - '2016-10-06 21:42:49.488029'
+    - '2016-10-06 21:42:49.488029'
+    - '112'
+  - - '13'
+    - '4'
+    - '23'
+    - true
+    - '2016-10-10 22:35:58.914857'
+    - '2016-10-10 22:35:58.914857'
+    - '111'
+  - - '14'
+    - '4'
+    - '26'
+    - true
+    - '2016-10-12 21:17:56.283957'
+    - '2016-10-12 21:17:56.283957'
+    - '107'
+  - - '15'
+    - '2'
+    - '27'
+    - true
+    - '2016-10-12 23:33:47.065699'
+    - '2016-10-12 23:33:47.065699'
+    - '112'
+  - - '16'
+    - '5'
+    - '30'
+    - true
+    - '2016-10-17 16:24:20.87521'
+    - '2016-10-17 16:24:20.87521'
+    - '112'
+  - - '17'
+    - '5'
+    - '28'
+    - true
+    - '2016-10-17 16:24:25.129523'
+    - '2016-10-17 16:24:25.129523'
+    - '112'
+  - - '18'
+    - '5'
+    - '27'
+    - true
+    - '2016-10-17 16:24:27.883344'
+    - '2016-10-17 16:24:27.883344'
+    - '112'
+  - - '19'
+    - '5'
+    - '29'
+    - true
+    - '2016-10-17 16:24:32.082163'
+    - '2016-10-17 16:24:32.082163'
+    - '112'
+  - - '20'
+    - '5'
+    - '31'
+    - true
+    - '2016-10-17 16:24:35.054578'
+    - '2016-10-17 16:24:35.054578'
+    - '112'
+  - - '21'
+    - '5'
+    - '32'
+    - true
+    - '2016-10-17 16:24:38.48706'
+    - '2016-10-17 16:24:38.48706'
+    - '112'
+  - - '22'
+    - '5'
+    - '24'
+    - true
+    - '2016-10-17 16:25:43.525053'
+    - '2016-10-17 16:25:43.525053'
+    - '107'
+  - - '23'
+    - '5'
+    - '25'
+    - true
+    - '2016-10-17 16:25:48.429776'
+    - '2016-10-17 16:25:48.429776'
+    - '107'
+  - - '24'
+    - '5'
+    - '26'
+    - true
+    - '2016-10-17 16:26:08.272148'
+    - '2016-10-17 16:26:08.272148'
+    - '107'
+  - - '25'
+    - '6'
+    - '26'
+    - true
+    - '2016-10-17 21:23:10.419462'
+    - '2016-10-17 21:23:10.419462'
+    - '107'
+  - - '26'
+    - '6'
+    - '25'
+    - true
+    - '2016-10-17 21:23:15.888117'
+    - '2016-10-17 21:23:15.888117'
+    - '107'
+  - - '27'
+    - '6'
+    - '24'
+    - true
+    - '2016-10-17 21:23:19.8737'
+    - '2016-10-17 21:23:19.8737'
+    - '107'
+  - - '28'
+    - '7'
+    - '24'
+    - true
+    - '2016-10-18 22:31:48.664245'
+    - '2016-10-18 22:31:48.664245'
+    - '107'
+  - - '29'
+    - '7'
+    - '25'
+    - true
+    - '2016-10-18 22:31:52.710368'
+    - '2016-10-18 22:31:52.710368'
+    - '107'
+  - - '30'
+    - '7'
+    - '26'
+    - true
+    - '2016-10-18 22:32:04.498001'
+    - '2016-10-18 22:32:04.498001'
+    - '107'
+  - - '31'
+    - '2'
+    - '33'
+    - true
+    - '2016-10-19 16:48:21.73841'
+    - '2016-10-19 16:48:21.73841'
+    - '113'
+  - - '32'
+    - '2'
+    - '34'
+    - true
+    - '2016-10-19 16:48:27.011659'
+    - '2016-10-19 16:48:27.011659'
+    - '113'
+  - - '33'
+    - '2'
+    - '35'
+    - true
+    - '2016-10-19 16:48:31.481088'
+    - '2016-10-19 16:48:31.481088'
+    - '113'
+  - - '34'
+    - '2'
+    - '36'
+    - true
+    - '2016-10-19 16:48:35.428824'
+    - '2016-10-19 16:48:35.428824'
+    - '113'
+  - - '35'
+    - '7'
+    - '33'
+    - true
+    - '2016-10-19 20:25:23.95879'
+    - '2016-10-19 20:25:23.95879'
+    - '113'
+  - - '36'
+    - '4'
+    - '33'
+    - true
+    - '2016-10-20 21:16:24.06377'
+    - '2016-10-20 21:16:24.06377'
+    - '113'
+  - - '37'
+    - '4'
+    - '34'
+    - true
+    - '2016-10-20 21:16:26.622821'
+    - '2016-10-20 21:16:26.622821'
+    - '113'
+  - - '38'
+    - '4'
+    - '35'
+    - true
+    - '2016-10-20 21:16:29.167754'
+    - '2016-10-20 21:16:29.167754'
+    - '113'
+  - - '39'
+    - '4'
+    - '36'
+    - true
+    - '2016-10-20 21:16:31.194024'
+    - '2016-10-20 21:16:31.194024'
+    - '113'
+
+---
+courses:
+  columns:
+  - id
+  - user_id
+  - learn_id
+  - created_at
+  - updated_at
+  records: 
+  - - '4'
+    - '2'
+    - '8'
+    - '2016-10-04 21:37:10.918518'
+    - '2016-10-04 21:37:10.918518'
+  - - '5'
+    - '2'
+    - '11'
+    - '2016-10-04 22:02:41.235312'
+    - '2016-10-04 22:02:41.235312'
+  - - '6'
+    - '2'
+    - '111'
+    - '2016-10-04 23:07:10.828289'
+    - '2016-10-04 23:07:10.828289'
+  - - '7'
+    - '2'
+    - '107'
+    - '2016-10-05 19:02:14.701647'
+    - '2016-10-05 19:02:14.701647'
+  - - '8'
+    - '4'
+    - '107'
+    - '2016-10-05 19:19:21.032217'
+    - '2016-10-05 19:19:21.032217'
+  - - '9'
+    - '4'
+    - '11'
+    - '2016-10-05 19:20:39.141946'
+    - '2016-10-05 19:20:39.141946'
+  - - '11'
+    - '4'
+    - '112'
+    - '2016-10-06 21:41:43.775239'
+    - '2016-10-06 21:41:43.775239'
+  - - '12'
+    - '4'
+    - '111'
+    - '2016-10-10 22:31:21.655958'
+    - '2016-10-10 22:31:21.655958'
+  - - '13'
+    - '2'
+    - '112'
+    - '2016-10-12 23:32:46.782722'
+    - '2016-10-12 23:32:46.782722'
+  - - '14'
+    - '5'
+    - '112'
+    - '2016-10-17 16:24:18.596494'
+    - '2016-10-17 16:24:18.596494'
+  - - '15'
+    - '5'
+    - '107'
+    - '2016-10-17 16:25:41.324651'
+    - '2016-10-17 16:25:41.324651'
+  - - '16'
+    - '5'
+    - '111'
+    - '2016-10-17 19:04:22.251794'
+    - '2016-10-17 19:04:22.251794'
+  - - '17'
+    - '6'
+    - '107'
+    - '2016-10-17 21:23:04.872742'
+    - '2016-10-17 21:23:04.872742'
+  - - '18'
+    - '7'
+    - '107'
+    - '2016-10-18 22:31:40.100737'
+    - '2016-10-18 22:31:40.100737'
+  - - '19'
+    - '2'
+    - '113'
+    - '2016-10-19 16:48:12.142276'
+    - '2016-10-19 16:48:12.142276'
+  - - '20'
+    - '7'
+    - '113'
+    - '2016-10-19 20:30:24.760678'
+    - '2016-10-19 20:30:24.760678'
+  - - '21'
+    - '4'
+    - '113'
+    - '2016-10-20 21:16:19.376089'
+    - '2016-10-20 21:16:19.376089'
+
+---
+learns:
+  columns:
+  - id
+  - title
+  - created_at
+  - updated_at
+  records: 
+  - - '8'
+    - Ball and Socket Design
+    - '2016-09-01 18:25:40.881133'
+    - '2016-09-01 18:25:40.881133'
+  - - '11'
+    - Test
+    - '2016-09-01 18:24:22.580673'
+    - '2016-09-01 18:24:49.094478'
+  - - '107'
+    - Test 3
+    - '2016-09-07 14:47:05.516451'
+    - '2016-09-07 14:47:05.516451'
+  - - '111'
+    - Super Module
+    - '2016-09-07 21:18:22.380927'
+    - '2016-09-07 21:18:22.380927'
+  - - '113'
+    - Testing again
+    - '2016-10-12 21:53:37.494873'
+    - '2016-10-12 21:53:37.494873'
+
+---
+lectures:
+  columns:
+  - id
+  - title
+  - content
+  - created_at
+  - updated_at
+  - learn_id
+  records: 
+  - - '13'
+    - Overview
+    - "### Components that Make Kits\r\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/hYpkfxI5DPQ\"
+      frameborder=\"0\" allowfullscreen></iframe>\r\nThe most widely used RAM Mount
+      design is made up of a ball base, a double socket arm, and another ball that
+      either connects to the device you are mounting, or a RAM holder that supports
+      your device:\r\n\r\n![RAM 101](http://rammount.com/images/gallery/RAM-101/high/RAM-101.jpg
+      =400x)\r\n\r\nThere are many different types of ball bases, socket arms and
+      holders that allow you to configure any custom mounting solution. With this
+      technology you can mount virtually any type of device in any type of vehicle.\r\n\r\n[Row
+      of Ball Base Examples](http://rammount.com)\r\n\r\n[Row of socket arm Examples](http://rammount.com)\r\n\r\n[Row
+      of holder Examples](http://rammount.com)\r\n\r\n[2 or 3 more examples of complete
+      kits using different components](http://rammount.com)\r\n\t\r\n### Double Ball
+      and Socket Design\r\n\r\nThe double ball and socket design allows for near infinite
+      articulation on each side of the mount by simply loosening and tightening the
+      knob on the side of the arm. Some arms have an integrated spring on one side
+      of the mount. This spring allows one side to open up while keeping pressure
+      on the other ball base, so when you are adjusting the mount you can conveniently
+      adjust one side without interfering with the position of the opposite side.\r\nThe
+      ball itself is made of elastomeric rubber that is 10 times the strength of tire
+      rubber. When the socket arm tightens onto the ball, it displaces the rubber
+      which creates a firm hold, but also dampens shock and vibrations, giving it
+      the ability to withstand rough environments.\r\n\r\n\t\r\n\r\n### Single Ball
+      and Socket Design\r\n\r\nSimilar to the Double Ball and Socket Design, RAM offers
+      mounting components to make up single ball and socket mounting systems. These
+      systems are slightly less modular but tend to be lower profile and more cost
+      effective depending on the application. A few examples of these systems can
+      be found below, including the RAM Pod I vehicle mounting system, and Tele-Pole
+      Swing Arm Mounts.\r\n\r\n\t[Diagram showing a few different Single Ball & Socket
+      Mounts]\r\n\r\n### Different Ball & Socket Sizes\r\n\r\nThere are a total of
+      5 sizes of ball and socket joints each designed to hold devices of a different
+      weight. These are the following ball sizes with their respective weight capacity,
+      and devices commonly used for that size ball*:\r\n[Chart with the following
+      info]:\r\n\r\nSize\tDiameter\t\tWeight Capacity\tCommon Devices\r\nA-Size\t9/60”
+      Diameter Ball\tHolds up to 1lb.\t\tSmall Security Cameras\r\nB-Size\t1” Diameter
+      Ball\tHolds up to 5lbs.\tPhones, Cameras, Tablets, GPS\r\nC-Size\t1.5” Diameter
+      Ball\tHolds up to 10lbs.\tLarge Tablets, Large GPS, Small Monitors\r\nD-Size\t2.25”
+      Diameter Ball\tHolds up to 15lbs.\tLarge Monitors & Displays\r\nE-Size\t3.38”
+      Diameter Ball\tHolds up to 20lbs.\tLarge Monitors & Displays, Military Grade\r\n*For
+      applications in an extreme environment, it is recommended to move up one ball
+      size. For example, on a Forklift the C-Size 1.5” ball would be recommended for
+      devices up to 5lbs. Or If you are mounting a large GPS (10 lbs) on a boat that
+      will be on rough waves, we would suggest using the D-Size 2.25” Ball."
+    - '2016-08-17 15:54:25.419617'
+    - '2016-08-31 15:42:13.054704'
+    - '8'
+  - - '16'
+    - Ball bases
+    - "There are hundreds of different ball bases to choose from, all interchangeable
+      within the same size ball. These are a few of the most common types of universal
+      ball bases. More bases will be covered in the vehicle section.\r\n\r\n[Diagram
+      with the following info](http://rammount.com/ru):\r\n\r\n> Flat Surface bases\t\r\n
+      \   - RAM-B-202U\t\r\n    - RAM-202U        \r\n    - RAM-D-202U\t\r\n\r\n>
+      Handlebar/Rail Bases\t\r\n    - RAM-B-231ZU\t\r\n    - RAM-235U\t\r\n    - RAP-404U\t\r\n
+      \   - RAM-271U-2\t\r\n    - RAM-B-408-XXX\r\n\r\n> Suction Cups\t\tRAM-B-224-1U\tRAP-365-224-1U\tRAM-B-189BU\r\n\r\nOthers:\r\n\r\nMagnetic\tAdhesive\tTrack\tCup
+      Holder Bases\tBolt Head Adapter\tFlat Edge Clamp\r\n"
+    - '2016-08-18 18:31:48.736376'
+    - '2016-08-18 18:31:48.736376'
+    - '8'
+  - - '17'
+    - Test 1
+    - "\r\n<iframe width=\"1280\" height=\"720\" src=\"https://www.youtube.com/embed/q6xVO0Kg3ao\"
+      frameborder=\"0\" allowfullscreen></iframe>\r\n\r\n<div class='learning'>\r\n<img
+      src='http://www.rammount.com/images/RamU/Slide1.jpg' class='img-responsive'>\r\n<img
+      src='http://www.rammount.com/images/RamU/Slide2.jpg' class='img-responsive'>\r\n<img
+      src='http://www.rammount.com/images/RamU/Slide3.jpg' class='img-responsive'>\r\n</div>"
+    - '2016-08-31 16:40:59.783564'
+    - '2016-10-25 21:26:58.867112'
+    - '11'
+  - - '18'
+    - TEsting MOAR!
+    - TEsting
+    - '2016-09-01 23:26:51.192913'
+    - '2016-09-01 23:26:51.192913'
+    - 
+  - - '19'
+    - tet
+    - test
+    - '2016-09-01 23:27:01.879204'
+    - '2016-09-01 23:27:01.879204'
+    - 
+  - - '20'
+    - 'third time '
+    - "is the charm\r\n"
+    - '2016-09-01 23:27:49.673719'
+    - '2016-09-01 23:27:49.673719'
+    - 
+  - - '23'
+    - Adding Lectures
+    - "Step by Step something\r\n<h1>Header</h1>"
+    - '2016-09-07 21:18:47.170331'
+    - '2016-09-07 21:18:47.170331'
+    - '111'
+  - - '24'
+    - This is another lecture about something
+    - 'Somethings are tough, some are not so tough '
+    - '2016-10-03 20:32:48.447178'
+    - '2016-10-24 21:05:11.274225'
+    - '107'
+  - - '25'
+    - Another one
+    - test test
+    - '2016-10-05 19:01:21.656975'
+    - '2016-10-05 19:01:21.656975'
+    - '107'
+  - - '26'
+    - One More
+    - one one one one
+    - '2016-10-05 19:01:33.783189'
+    - '2016-10-05 19:01:33.783189'
+    - '107'
+  - - '33'
+    - Lecture 1 - Overview
+    - something somethings
+    - '2016-10-19 16:26:33.166115'
+    - '2016-10-24 22:29:00.250646'
+    - '113'
+  - - '34'
+    - Lecture 2 - Something
+    - something something
+    - '2016-10-19 16:26:45.81208'
+    - '2016-10-19 16:26:45.81208'
+    - '113'
+  - - '35'
+    - Lecture 3 - BIG TEST
+    - BIG TEST!
+    - '2016-10-19 16:27:04.793904'
+    - '2016-10-19 16:27:04.793904'
+    - '113'
+  - - '36'
+    - Lecture 4 - SOmething Bigger!
+    - SOMETHING BIGGER!
+    - '2016-10-19 16:27:28.852693'
+    - '2016-10-19 16:27:28.852693'
+    - '113'
+  - - '37'
+    - Lecture 5 - Test one
+    - test test
+    - '2016-10-27 16:19:34.194122'
+    - '2016-10-27 16:19:34.194122'
+    - '113'
+
+---
+questions:
+  columns:
+  - id
+  - quiz_id
+  - question
+  - answer
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - '5'
+    - probably not gonna work
+    - 'or is it? '
+    - '2016-10-12 20:50:27.95725'
+    - '2016-10-12 20:50:27.95725'
+  - - '2'
+    - '6'
+    - Are you ready for RAM U?!?!
+    - 'yes'
+    - '2016-10-12 21:17:29.301524'
+    - '2016-10-12 21:17:29.301524'
+  - - '3'
+    - '6'
+    - Welcome person are you excited?
+    - Moderately
+    - '2016-10-12 21:17:29.308372'
+    - '2016-10-17 17:24:17.169306'
+
+---
+quizzes:
+  columns:
+  - id
+  - learn_id
+  - title
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - 
+    - something
+    - '2016-10-12 20:02:28.630331'
+    - '2016-10-12 20:02:28.630331'
+  - - '2'
+    - '111'
+    - work
+    - '2016-10-12 20:29:56.43736'
+    - '2016-10-12 20:29:56.43736'
+  - - '4'
+    - '8'
+    - Ball and Socket quiz
+    - '2016-10-12 20:48:27.275962'
+    - '2016-10-12 20:48:27.275962'
+  - - '5'
+    - '11'
+    - another test
+    - '2016-10-12 20:50:27.955907'
+    - '2016-10-12 20:50:27.955907'
+  - - '6'
+    - '107'
+    - Ram University
+    - '2016-10-12 21:17:29.300058'
+    - '2016-10-12 21:17:29.300058'
+
+---
+user_quiz_results:
+  columns:
+  - id
+  - user_id
+  - quiz_id
+  - score
+  - retake
+  - attempts
+  - created_at
+  - updated_at
+  records: 
+  - - '19'
+    - '4'
+    - '6'
+    - '33'
+    - true
+    - '1'
+    - '2016-10-20 21:42:00.69216'
+    - '2016-10-20 21:42:00.748484'
+  - - '20'
+    - '4'
+    - '5'
+    - '0'
+    - true
+    - '3'
+    - '2016-10-20 22:47:04.953896'
+    - '2016-10-25 15:38:42.856481'
+  - - '21'
+    - '2'
+    - '6'
+    - '50'
+    - true
+    - '2'
+    - '2016-10-20 23:10:04.856498'
+    - '2016-10-20 23:10:33.935831'
+  - - '22'
+    - '2'
+    - '5'
+    - '0'
+    - true
+    - '9'
+    - '2016-10-20 23:12:22.933711'
+    - '2016-10-20 23:18:07.603674'
+
+---
+users:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - created_at
+  - updated_at
+  - admin
+  records: 
+  - - '1'
+    - brianle206@gmail.com
+    - "$2a$11$Uw/1rdV4Ed84wCHRCRs/W.9yScbBVc1SLtE0HCrSVh/pkRNp4w5ia"
+    - a44feabdd83809f6e2a8ac07569112bd64ff1f0b17855ab757913e6f0e68e379
+    - '2016-08-05 17:44:18.800137'
+    - 
+    - '98'
+    - '2016-10-27 16:19:13.77929'
+    - '2016-10-26 23:01:03.847362'
+    - "::1"
+    - "::1"
+    - '2016-08-04 20:28:14.514102'
+    - '2016-10-27 16:19:13.78098'
+    - true
+  - - '2'
+    - jon@stark.com
+    - "$2a$11$apt3jLYIW/gGn2huhPriMOrQoewLcyj9blJC8qiSOk6phf7RK6cdO"
+    - 
+    - 
+    - 
+    - '70'
+    - '2016-10-27 16:19:43.346806'
+    - '2016-10-27 16:18:53.442626'
+    - "::1"
+    - "::1"
+    - '2016-08-22 17:57:17.928693'
+    - '2016-10-27 16:19:43.348605'
+    - false
+  - - '4'
+    - arya@stark.com
+    - "$2a$11$AaqdlY.a1CuhjRDZEubmbesPAORk4omwvGvKbbZhOUaUt0GuRr/oa"
+    - 
+    - 
+    - 
+    - '29'
+    - '2016-11-01 17:30:00.513994'
+    - '2016-10-25 15:32:37.122259'
+    - "::1"
+    - "::1"
+    - '2016-08-23 17:36:11.835508'
+    - '2016-11-01 17:30:00.515715'
+    - false
+  - - '5'
+    - ram@mount.com
+    - "$2a$11$Mw4IcO27ntG5WZMadr7QX.M633TTzRWuTF1IMd2343C5D5Kt4fMJe"
+    - 
+    - 
+    - 
+    - '4'
+    - '2016-10-17 21:19:50.398952'
+    - '2016-10-17 19:02:54.569402'
+    - "::1"
+    - "::1"
+    - '2016-10-17 16:24:08.893625'
+    - '2016-10-17 21:19:50.400905'
+    - false
+  - - '6'
+    - ramm@mount.com
+    - "$2a$11$RRfUCMNJMYjHgEWt3.g0c.bo2cyC2HOBvEnIvwI8ru0aWwTJ8yJZ6"
+    - 
+    - 
+    - 
+    - '1'
+    - '2016-10-17 21:22:14.80989'
+    - '2016-10-17 21:22:14.80989'
+    - "::1"
+    - "::1"
+    - '2016-10-17 21:22:14.797721'
+    - '2016-10-17 21:22:14.811327'
+    - false
+  - - '7'
+    - sansa@stark.com
+    - "$2a$11$PiqSrTN5M8MceJ0tpQKd6u9fAMGgLLCdZIy5qvVyk9EBIfxlv2336"
+    - 
+    - 
+    - 
+    - '4'
+    - '2016-10-19 20:23:50.263171'
+    - '2016-10-18 23:18:05.87813'
+    - "::1"
+    - "::1"
+    - '2016-10-18 22:31:09.261146'
+    - '2016-10-19 20:23:50.26604'
+    - false
