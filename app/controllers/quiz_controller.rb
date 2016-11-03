@@ -14,7 +14,7 @@ class QuizController < ApplicationController
   def update
     @quiz = Quiz.find(params[:id])
     if @quiz.update(quiz_params)
-      redirect_to root_path
+      redirect_to quiz_index_path
     end
   end
 
