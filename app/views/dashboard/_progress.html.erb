@@ -8,9 +8,17 @@
       <div class="row">
       	<hr>
         <div class="col-sm-7">
-          <h4 class='grey'>
-            <%= "#{learn.title} #{@complete}/#{@number_of_lectures}"  %>
-          </h4>
+          <div class='dropdown'>
+            <h5 class='grey dropdown-toggle' data-toggle='dropdown'>
+              <%= learn.title %><span class='caret'></span>
+            </h5>
+                <% learn.lectures.each do |lecture| %>
+                  <ul class='dropdown-menu relative dashboard'>
+                    <%= lecture.title %> <% complete(current_user.id, lecture.id, learn.id) %> <% if @done %> <span class='glyphicon glyphicon-ok'></span><% end %>
+
+                  </ul>
+                <% end %>
+          </div>
         </div>
         <div class="col-sm-5 text-center">
           <% if @complete/@number_of_lectures * 100 == 100 %>

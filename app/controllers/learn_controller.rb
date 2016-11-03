@@ -43,7 +43,7 @@ class LearnController < ApplicationController
     @section = Learn.find(params[:id])
     @lecture = @section.lectures.build(lecture_params)
     if @lecture.save
-      redirect_to @section
+      redirect_to @lecture
     end
   end
 

@@ -28,4 +28,8 @@ module DashboardHelper
 	def find_quiz_title(quiz)
 		@quiz_title = Quiz.find(quiz).title
 	end
+
+	def complete(user,lecture,learn)
+		@done = Complete.find_by(user_id: user, lecture_id: lecture, learn_id: learn)
+	end
 end
