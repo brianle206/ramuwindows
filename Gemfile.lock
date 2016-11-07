@@ -98,6 +98,7 @@ GEM
     nokogiri (1.6.8.1-x86-mingw32)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
+    pg (0.18.4-x86-mingw32)
     posix-spawn (0.3.12)
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
@@ -206,6 +207,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mysql2
+  pg
   pygments.rb
   rails (= 4.2.6)
   rails-bootstrap-markdown
