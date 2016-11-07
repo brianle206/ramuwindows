@@ -1,0 +1,957 @@
+/* line 1, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/dashboard.scss */
+.learning {
+  overflow-y: auto;
+  max-height: 350px;
+}
+
+/* line 5, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/dashboard.scss */
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background: #3d4a5c;
+}
+
+/* line 11, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/dashboard.scss */
+.content {
+  margin-left: 200px;
+  height: 500px;
+  width: auto;
+  position: relative;
+  background: #f00;
+  overflow: auto;
+  z-index: 1;
+}
+
+/* line 20, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/dashboard.scss */
+.info {
+  width: 1440px;
+  height: 300px;
+  position: relative;
+  background: #f55;
+}
+
+/* line 26, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/dashboard.scss */
+.no-padding {
+  padding-left: 0px;
+}
+
+/* line 29, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/dashboard.scss */
+.course-title {
+  color: white;
+}
+
+/* line 32, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/dashboard.scss */
+.progress {
+  margin: 18px 0px;
+}
+
+/* line 35, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/dashboard.scss */
+.panel {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.75);
+}
+
+/* line 38, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/dashboard.scss */
+.panel-body {
+  padding: 20px;
+  max-height: 500px;
+  overflow: scroll;
+}
+
+/* line 43, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/dashboard.scss */
+.img-circle {
+  border-radius: 50%;
+}
+
+/* line 46, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/dashboard.scss */
+.icon-block.half {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 25px;
+}
+
+/* line 52, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/dashboard.scss */
+.bg-purple-300 {
+  background-color: #ba68c8;
+}
+
+/* line 55, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/dashboard.scss */
+.bg-grey-300 {
+  background-color: #bfbfbf;
+}
+
+/* line 58, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/dashboard.scss */
+.icon-block {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  display: inline-block;
+  font-size: 35px;
+}
+
+/* line 66, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/dashboard.scss */
+.darkGrey {
+  color: #4c4c4c;
+}
+
+
+/*====================
+======Header CSS=====
+======================*/
+
+
+#navigation .navbar {
+  background:rgba(255, 255, 255, 0.952941);
+  border-radius: 0;
+  border-bottom: 0;
+  box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 3px;
+  padding-bottom: 8px;
+}
+
+#navigation .navbar-toggle{
+  margin-top: 20px;
+  background-color: #333;
+}
+
+#navigation .navbar-brand h1{
+  padding: 0;
+  margin: 0;
+}
+
+#navigation .navbar-nav.navbar-right li {
+	padding: 0 1px;
+}
+
+#navigation .navbar-nav.navbar-right {
+	margin-top:28px
+}
+
+#navigation .navbar-nav.navbar-right li a {
+	color: #43484E;
+	font-family: 'Roboto',sans-serif;
+	font-size: 14px;
+	padding: 0;
+	text-transform: uppercase;
+	-webkit-transition: all .9s ease 0s;
+	-moz-transition: all .9s ease 0s;
+	-o-transition: all .9s ease 0s;
+	transition: all .9s ease 0s;
+	padding: 6px 15px;
+}
+
+#navigation .navbar-inverse .navbar-nav  .active  a,  
+#navigation .navbar-inverse .navbar-nav  .active  a:focus, 
+#navigation .navbar-nav.navbar-right li a:hover {
+	color: #fff;
+	background-color: #fc7700;
+}
+
+
+/* line 1, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/learn.scss */
+.tile {
+  box-shadow: 1px 1px 1px black;
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  border: 1px solid black;
+  color: white;
+}
+
+/* line 9, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/learn.scss */
+.flip-container {
+  position: relative;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+
+/* line 16, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/learn.scss */
+.flip-container:hover .flipper {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  filter: FlipH;
+  -moz-filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+/* line 30, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/learn.scss */
+.flip-container, .front, .back {
+  width: 100%;
+  height: 220px;
+  margin: 10px 0px;
+}
+
+/* line 35, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/learn.scss */
+.flipper {
+  -webkit-transition: 0.8s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 0.8s;
+  -ms-transform-style: preserve-3d;
+  -moz-transition: 0.8s;
+  -moz-transform-style: preserve-3d;
+  transition: 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* line 47, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/learn.scss */
+.front, .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  background-size: 100% 100%;
+  color: Black;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* line 58, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/learn.scss */
+.front:hover {
+  transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+}
+
+/* line 63, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/learn.scss */
+.back {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  filter: FlipH;
+  -ms-filter: FlipH;
+}
+
+/* line 71, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/learn.scss */
+.front-title {
+  font-size: 20px;
+  text-align: center;
+  background-color: #bfbfbf;
+}
+
+/* line 76, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/learn.scss */
+.back-title {
+  text-align: center;
+}
+
+/* line 79, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/learn.scss */
+.background {
+  background-image: url("https://as1.ftcdn.net/jpg/00/49/94/54/500_F_49945457_cyfd9FuYvyCO8v1QOzAFHApZRtCLTDaw.jpg");
+  background-size: cover;
+}
+/* CSS Document */
+/*
+	----------------------------
+	RESET
+	____________________________
+*/
+
+body,img,p,h1,h2,h3,h4,h5,h6,form,table,td,ul,ol,li,fieldset { margin:0; padding:0; border:0; }
+p,h1,h2,h3,h4,h5,h6,ul { margin:15px 0; }
+
+@import "reset.css";
+
+
+/* CSS Document */
+
+
+/*
+	----------------------------
+	HTML SELECTORS
+	____________________________
+*/
+
+
+body { background: #333; font:14px/21px Helvetica, Arial, sans-serif; color: #333; margin: 0; padding: 0; }
+a { color: #ccc; text-decoration: underline; }
+a:hover { color: #fb2b2b; }
+h1, h2 { font-size: 26px; line-height: 28px; font-weight: normal; letter-spacing: -1px; color: #fff; }
+h3 { font-size: 18px; font-weight: normal; margin: 8px 0; }
+h4 { font-size: 14px; font-weight: normal; margin: 0; }
+h5 { font-size: 12px; font-weight: normal; margin: 0; }
+ul { margin-left: 20px; }
+ol { margin-left: 36px; }
+
+
+/*
+	----------------------------
+	LAYOUT
+	____________________________
+*/
+
+
+#wrapper { width: 960px; margin: 0 auto; padding: 48px 0 72px; }
+#main { width: 640px; float: left; }
+#main > p, #main > div { margin-left: 7px; }
+#sidebar { width: 280px; float: right; }
+#sidebar ol { margin: 12px 0 12px 22px; }
+/*
+	----------------------------
+	PAGE/SECTION SPECIFIC
+	____________________________
+*/
+
+
+#video-controls { width: 333px; }
+#video-controls a { color: #ddd; text-decoration: underline; }
+
+
+/*
+	----------------------------
+	UTILITY CLASSES
+	____________________________
+*/
+
+
+.black-15 { background: url(../media/black-15-trans.png); color: #fff; padding: 4px 12px; margin: 24px 0; }
+.black-35 { background: url(../media/black-35-trans.png); color: #fff; padding: 4px 12px; margin: 24px 0; }
+.black-50 { background: url(../media/black-50-trans.png); color: #fff; padding: 4px 12px; margin: 24px 0; }
+.black-65 { background: url(../media/black-65-trans.png); color: #fff; padding: 4px 12px; margin: 24px 0; }
+.black-85 { background: url(../media/black-85-trans.png); color: #fff; padding: 4px 12px; margin: 24px 0; }
+
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+/* line 1, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 4, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+ul {
+  padding-left: 0;
+}
+
+/* line 7, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+li {
+  list-style: none;
+}
+
+/* line 10, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 13, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+body {
+  font-family: 'Montserrat', Arial, serif;
+}
+
+/* line 16, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+::selection {
+  background-color: #EBEBF2;
+  color: #83828D;
+}
+
+/* ==================================== */
+/*          Navigaton Menu    
+/* ==================================== */
+/* line 26, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.menu-wrap {
+  background-color: #bfbfbf;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  margin-left: -280px;
+  font-size: 1em;
+  font-weight: 700;
+  overflow: auto;
+  transition: .25s;
+  z-index: 10;
+}
+
+/* line 39, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.menu-show {
+  margin-left: 0;
+  box-shadow: 4px 2px 15px 1px #B9ADAD;
+}
+
+/* line 43, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.menu-sidebar {
+  margin: 75px 0 80px 10px;
+  position: relative;
+  top: 110px;
+}
+
+/* line 48, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.menu-sidebar li {
+  padding: 18px 22px 0;
+}
+
+/* line 51, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.menu-sidebar li > a {
+  color: #f3f3f3;
+  font-size: 1.18em;
+  position: relative;
+}
+
+/* line 56, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.menu-sidebar li > a::after {
+  content: "";
+  display: block;
+  height: 0.15em;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  background-image: linear-gradient(to right, transparent 50.3%, #FFFA3B 50.3%);
+  transition: background-position .2s .1s ease-out;
+  background-size: 200% auto;
+}
+
+/* line 69, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.menu-sidebar li > a:hover::after {
+  background-position: -100% 0;
+}
+
+/* line 72, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.menu-sidebar .menu-item-has-children {
+  position: relative;
+}
+
+/* line 75, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.menu-sidebar .menu-item-has-children .sub-menu {
+  display: none;
+}
+
+/* line 78, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.sidebar-menu-arrow::after {
+  content: "\f107";
+  font-family: 'FontAwesome';
+  padding: 10px;
+  color: #FFFA3B;
+  position: relative;
+}
+
+/* line 85, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.sidebar-menu-arrow:hover::after {
+  cursor: pointer;
+  color: #fff;
+}
+
+/* line 89, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.sidebar-menu-arrow:active::after {
+  top: 2px;
+}
+
+/*Hamburger Button*/
+/* line 95, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.toggle-button {
+  position: fixed;
+  width: 44px;
+  height: 40px;
+  top: 140px;
+  left: 40px;
+  padding: 4px;
+  transition: .25s;
+  z-index: 15;
+}
+
+/* line 105, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.toggle-button:hover {
+  cursor: pointer;
+}
+
+/* line 108, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.toggle-button .menu-bar {
+  position: absolute;
+  border-radius: 2px;
+  width: 80%;
+  transition: .5s;
+}
+
+/* line 114, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.toggle-button .menu-bar-top {
+  border: 4px solid #555;
+  border-bottom: none;
+  top: 0;
+}
+
+/* line 119, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.toggle-button .menu-bar-middle {
+  height: 4px;
+  background-color: #555;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  top: 4px;
+}
+
+/* line 126, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.toggle-button .menu-bar-bottom {
+  border: 4px solid #555;
+  border-top: none;
+  top: 22px;
+}
+
+/* line 131, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.button-open {
+  left: 25px;
+}
+
+/* line 134, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.button-open .menu-bar-top {
+  border-color: #fff;
+  transform: rotate(45deg) translate(8px, 8px);
+  transition: .5s;
+}
+
+/* line 139, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.button-open .menu-bar-middle {
+  background-color: #fff;
+  transform: translate(230px);
+  transition: .1s ease-in;
+  opacity: 0;
+}
+
+/* line 145, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.button-open .menu-bar-bottom {
+  border-color: #fff;
+  transform: rotate(-45deg) translate(7px, -7px);
+  transition: .5s;
+}
+
+/* Text Block */
+/* line 154, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.wrapper {
+  width: 40%;
+  margin: 100px auto 0;
+  color: #83828D;
+}
+
+/* line 159, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.wrapper .text {
+  padding: 30px;
+}
+
+/* line 162, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.wrapper .text .heading {
+  margin-bottom: 40px;
+  font-size: 2em;
+}
+
+/* line 166, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.wrapper .text p {
+  line-height: 1.6em;
+}
+
+/* line 169, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.wrapper .text .buttons {
+  margin-top: 40px;
+}
+
+/* Buttons */
+/* line 174, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.wrapper .buttons .button {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 20px 25px;
+  border-radius: 2em;
+  background-color: #70CE64;
+  color: #fff;
+  font-size: .9em;
+  font-weight: 700;
+  transition: background-color .3s;
+}
+
+/* line 185, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.wrapper .buttons .button-secondary {
+  background-color: #FF6746;
+}
+
+/* line 188, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.wrapper .buttons .button-primary:hover {
+  background-color: #84D07A;
+}
+
+/* line 191, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.wrapper .buttons .button-secondary:hover {
+  background-color: #FF7D60;
+}
+
+/*Active state for the buttons*/
+/* line 196, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.wrapper .buttons .button-primary:active {
+  background-color: #70CE64;
+}
+
+/* line 199, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.wrapper .buttons .button-secondary:active {
+  background-color: #FF6746;
+}
+
+/*Icons*/
+/* line 204, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.wrapper .buttons .button span {
+  position: relative;
+  display: inline-block;
+  padding-right: 20px;
+}
+
+/* line 209, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.wrapper .buttons .button span::after {
+  position: absolute;
+  font-family: "FontAwesome";
+  right: -3px;
+  font-size: 14px;
+  top: 0;
+  transition: top .3s, right .3s;
+}
+
+/* line 217, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.wrapper .buttons .button-primary span::after {
+  content: "\f019";
+}
+
+/* line 220, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.wrapper .buttons .button-secondary span::after {
+  content: "\f178";
+}
+
+/*Slight icons animation*/
+/* line 224, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.wrapper .buttons .button-primary:hover span::after {
+  top: 4px;
+}
+
+/* line 227, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/plugins/sidebar.css.scss */
+.wrapper .buttons .button-secondary:hover span::after {
+  right: -6px;
+}
+/* line 5, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/progress.scss */
+.dropdown-menu.relative.dashboard {
+  position: relative;
+  background-color: white;
+  padding: 0px;
+  margin: 0px;
+}
+/* line 5, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/quiz.scss */
+.quiz_select {
+  height: 40px;
+}
+
+/* line 8, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/quiz.scss */
+.quizCard {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.75);
+}
+
+/* line 15, C:/Users/Brian/Desktop/RamUMySQL/app/assets/stylesheets/quiz.scss */
+.question-box {
+  padding: 10px;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+@media(max-width: 700px){
+
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+
+ */
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import "font-awesome";
+
+ul{
+	list-style: none;
+}
+.bgWhite{
+	background-image: url("https://as1.ftcdn.net/jpg/00/49/94/54/500_F_49945457_cyfd9FuYvyCO8v1QOzAFHApZRtCLTDaw.jpg");
+    background-size: cover;
+}
+.footer{
+	position:fixed;
+	z-index: 1px;
+	bottom:0;
+	width:100%;
+ 	margin-top: 20px;
+ 	background: rgba(255, 255, 255, 0.952941);
+ 	height: 50px;
+	background-size: cover;
+}
+body{
+	padding-top: 70px;
+	padding-bottom: 70px;
+	#background: #afeeee;
+}
+.black{
+	color: black;
+}
+.grey{
+	color: #757575;
+}
+.category{
+	color: white;
+
+}
+.vertical-align{
+	margin: 10px 0px;
+}
+.logo{
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+}
+.panel {
+	box-shadow: 0 1px 4px 0 rgba(0,0,0,.5);
+}
+.navbar-default .navbar-nav > li > a {
+	color: white;
+}
+.dropdown-menu.relative{
+	position: relative;
+	background-color: #bfbfbf;
+	border: 0px solid rgba(0,0,0,0);
+	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0)
+}
+dropdown-menu.two{
+	background-color: #bfbfbf;
+	border: 0px solid rgba(0,0,0,0);
+	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0)
+}
+.row{
+	margin: auto;
+}
+/**
+ * Bootstrap-Markdown.css.scss
+ *
+ * @author Taufan Aditya @taufanaditya
+ * @author Oleg Vivtash <o@vivtash.net> (LESS->SCSS conversion)
+ * @copyright 2013-2014 Taufan Aditya
+ */
+/* line 18, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor {
+  display: block;
+  border: 1px solid #ddd;
+}
+/* line 22, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor > .md-header, .md-editor .md-footer {
+  display: block;
+  padding: 6px 4px;
+  background: #f5f5f5;
+}
+/* line 28, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor > .md-header {
+  margin: 0;
+}
+/* line 32, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor > .md-preview {
+  background: #fff;
+  border-top: 1px dashed #ddd;
+  border-bottom: 1px dashed #ddd;
+  min-height: 10px;
+  overflow: auto;
+}
+/* line 40, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor > textarea {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 14px;
+  outline: 0;
+  outline: thin dotted  \9;
+  /* IE6-9 */
+  margin: 0;
+  display: block;
+  padding: 0;
+  width: 100%;
+  border: 0;
+  border-top: 1px dashed #ddd;
+  border-bottom: 1px dashed #ddd;
+  border-radius: 0;
+  box-shadow: none;
+  background: #eeeeee;
+}
+/* line 55, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor > textarea:focus {
+  box-shadow: none;
+  background: #fff;
+}
+/* line 64, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.active {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: "inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px ${color-rgba}";
+  box-shadow: "inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px ${color-rgba}";
+}
+/* line 70, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor .md-controls {
+  float: right;
+  padding: 3px;
+}
+/* line 74, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor .md-controls .md-control {
+  right: 5px;
+  color: #bebebe;
+  padding: 3px 3px 3px 10px;
+}
+/* line 78, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor .md-controls .md-control:hover {
+  color: #333;
+}
+/* line 85, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  padding: 60px 30px 15px;
+  background: #fff !important;
+  border: 0 !important;
+}
+/* line 96, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode.theme-dark {
+  background: #1d1f21 !important;
+}
+/* line 99, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode.theme-dark .md-fullscreen-controls a {
+  color: #a4b1b1;
+}
+/* line 101, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode.theme-dark .md-fullscreen-controls a:hover {
+  color: #dbe0e0;
+  text-shadow: 0 0 10px #000;
+}
+/* line 107, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode.theme-dark .md-preview,
+.md-editor.md-fullscreen-mode.theme-dark .md-input,
+.md-editor.md-fullscreen-mode.theme-dark .md-input:hover,
+.md-editor.md-fullscreen-mode.theme-dark .md-input:active,
+.md-editor.md-fullscreen-mode.theme-dark .md-input:focus {
+  color: #dbe0e0;
+  background: #1d1f21 !important;
+}
+/* line 118, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode.theme-dark .btn:hover, .md-editor.md-fullscreen-mode.theme-dark .btn:focus, .md-editor.md-fullscreen-mode.theme-dark .btn.active, .md-editor.md-fullscreen-mode.theme-dark .btn:active {
+  color: #dbe0e0;
+  text-shadow: 0 0 10px #000;
+}
+/* line 128, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode .md-footer {
+  display: none;
+}
+/* line 132, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode .md-input,
+.md-editor.md-fullscreen-mode .md-preview {
+  margin: 0 auto !important;
+  height: 100% !important;
+  font-size: 20px !important;
+  padding: 20px !important;
+  color: #999;
+  line-height: 1.6em !important;
+  resize: none !important;
+  box-shadow: none !important;
+  background: #fff !important;
+  border: 0 !important;
+}
+/* line 146, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode .md-preview {
+  color: #333;
+  overflow: auto;
+}
+/* line 152, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode .md-input:hover, .md-editor.md-fullscreen-mode .md-input:focus {
+  color: #333;
+  background: #fff !important;
+}
+/* line 159, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode .md-header {
+  background: none;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 20px;
+}
+/* line 167, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode .btn-group {
+  float: none;
+}
+/* line 171, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode .btn {
+  border: 0;
+  background: none;
+  color: #b3b3b3;
+}
+/* line 176, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode .btn:hover, .md-editor.md-fullscreen-mode .btn:focus, .md-editor.md-fullscreen-mode .btn.active, .md-editor.md-fullscreen-mode .btn:active {
+  box-shadow: none;
+  color: #333;
+}
+/* line 185, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode .md-fullscreen-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+  z-index: 1002;
+  display: block;
+}
+/* line 192, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode .md-fullscreen-controls a {
+  color: #b3b3b3;
+  clear: right;
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+/* line 200, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode .md-fullscreen-controls a:hover {
+  color: #333;
+  text-decoration: none;
+}
+/* line 207, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor.md-fullscreen-mode .md-editor {
+  height: 100% !important;
+  position: relative;
+}
+/* line 213, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-editor .md-fullscreen-controls {
+  display: none;
+}
+
+/* line 218, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/rails-bootstrap-markdown-2.6.0/app/assets/stylesheets/bootstrap-markdown.css.scss */
+.md-nooverflow {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
